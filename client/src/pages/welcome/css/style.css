@@ -1,0 +1,23 @@
+body {
+  overflow:hidden;
+  background: #F5F5F5;
+}
+
+#wrapper {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.cssans__word {
+  position: relative;
+}
+
+.signin{
+  position: absolute;
+  top:0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+}
