@@ -25,13 +25,33 @@
         </CarouselItem>
       </Carousel>
     </div>
+    <div class="container">
+      <Divider orientation="left" style="font-size:20px;font-weight:bolder;padding-top:20px;">学 院 新 闻</Divider>
+      <!-- <Row :gutter="24" >
+        <Col span="6" >
+          <Card shadow class="card1">这里是新闻内容</Card>
+        </Col>
+        <Col span="6">
+          <Card shadow class="card2">这里是新闻内容</Card>
+        </Col>
+        <Col span="6">
+          <Card shadow class="card3">这里是新闻内容</Card>
+        </Col>
+        <Col span="6">
+          <Card shadow class="card4">这里是新闻内容</Card>
+        </Col>
+      </Row> -->
+      <css-card></css-card>
+    </div>
+    <div class="footer container">
+      这里放footer
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import DevHeader from '@/components/DevHeader.vue'
-
+import CssCard from '@/components/CssCard.vue'
 export default {
   name: 'home',
   data () {
@@ -40,7 +60,7 @@ export default {
         }
   },
   components: {
-      DevHeader
+      DevHeader,CssCard
   }
 }
 </script>
@@ -56,6 +76,7 @@ export default {
     width: 90%;
     margin:10px auto;
     background-color: #fff;
+    box-shadow: 1px 1px 5px #aaa;
   }
   .img1{
     background: linear-gradient(33deg, #6DE195, #C4E759)
@@ -68,5 +89,24 @@ export default {
   }
   .img4{
     background: linear-gradient(33deg, #6CACFF, #8DEBFF)
+  }
+  .card1{
+    height: 300px;
+    background: linear-gradient(33deg, #6CACFF, #8DEBFF)
+  }
+  .card2{
+    height: 300px;
+     background: linear-gradient(33deg, #99E5A2, #C1E3FF)
+  }
+  .card3{
+    height: 300px;
+    background: linear-gradient(33deg, #6DE195, #C4E759)
+  }
+  .card4{
+    height: 300px;
+    background: linear-gradient(33deg, #99E5A2, #C1E3FF)
+  }
+  .footer{
+    margin-top: 300px;
   }
 </style>

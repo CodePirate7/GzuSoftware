@@ -8,12 +8,18 @@ export default new Router({
     {
       path: '/',
       name:'welcome',
-      component:() => import(/* webpackChunkName: "welcome" */ './views/Welcome.vue')
+      component:() => import(/* webpackChunkName: "welcome" */ './views/Welcome.vue'),
+      meta:{
+        title:'Welcome'
+      }
     },
     {
     path: '/home',
     name: 'home',
-    component: () => import(/* webpackChunkName: "home" */ './views/Home.vue')
+    component: () => import(/* webpackChunkName: "home" */ './views/Home.vue'),
+    meta:{
+      title:'贵州大学示范性软件学院'
+      }
     },
     {
       path: '/about',
@@ -22,3 +28,5 @@ export default new Router({
     }
   ]
 })
+
+

@@ -11,12 +11,6 @@ export default {
   name:'welcome',
   created(){
     location.href="/welcome.html"
-  },
-  methods:{
-    jumptohome(){
-      
-      this.$router.push('/home')
-    }
   }
 }
 </script>
