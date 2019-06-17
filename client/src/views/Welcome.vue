@@ -1,35 +1,6 @@
 <template>
   <div>
-    <div id="wrapper">
-      <div class="cssans cssans--center">
-        <div class="cssans__accessible">Welcome</div>
-        <div class="cssans__word">
-          <b class="cssans:W"></b>
-          <b class="cssans:e"></b>
-          <b class="cssans:l"></b>
-          <b class="cssans:c"></b>
-          <b class="cssans:o"></b>
-          <b class="cssans:m"></b>
-          <b class="cssans:e"></b>
-        </div>
-        <div class="cssans__word">
-          <b class="cssans:G"></b>
-          <b class="cssans:z"></b>
-          <b class="cssans:u"></b>
-        </div>
-      </div>
-    </div>
-    <div class="signin" @click="jumptohome">
-      <div class="cssans--right">
-        <div class="cssans__word">
-          <b class="cssans:E"></b>
-          <b class="cssans:n"></b>
-          <b class="cssans:t"></b>
-          <b class="cssans:e"></b>
-          <b class="cssans:r"></b>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </template>
 
@@ -38,6 +9,9 @@
 <script>
 export default {
   name:'welcome',
+  created(){
+    location.href="/welcome.html"
+  },
   methods:{
     jumptohome(){
       
