@@ -2,50 +2,49 @@
   <div class="dev-header">
     <Row>
       <Col span="20" offset="2">
-        <Menu mode="horizontal" active-name="1">
-          <MenuItem name="1">
+        <Menu mode="horizontal" :active-name="activename">
+          <MenuItem name="/home" to="/home">
             <Icon type="ios-paper"/>首页
           </MenuItem>
-          <Submenu name="2">
+          <Submenu name="/school">
             <template slot="title">
               <Icon type="ios-stats"/>学院概况
             </template>
-            <MenuItem name="2-1">学院简介</MenuItem>
-            <MenuItem name="2-2">组织结构</MenuItem>
-            <MenuItem name="2-3">校企合作</MenuItem>
-            <MenuItem name="2-4">行政机构</MenuItem>
-            <MenuItem name="2-4">联系我们</MenuItem>
+            <MenuItem name="/introduction" to="/school/introduction">学院简介</MenuItem>
+            <MenuItem name="/structure" to="/school/structure">组织结构</MenuItem>
+            <MenuItem name="/partner" to="/school/partner">校企合作</MenuItem>
+            <MenuItem name="/contact" to="/school/contact">联系我们</MenuItem>
           </Submenu>
-          <Submenu name="3">
+          <Submenu name="/workers" to="/workers">
             <template slot="title">
               <Icon type="ios-stats"/>学院人员
             </template>
-            <MenuItem name="3-1">教学研究人员</MenuItem>
-            <MenuItem name="3-2">行政人员</MenuItem>
+            <MenuItem name="/teaching" to="/workers/teaching">教学研究人员</MenuItem>
+            <MenuItem name="/administrative" to="/workers/administrative">行政人员</MenuItem>
           </Submenu>
-          <Submenu name="4">
+          <Submenu name="/students" to="/students">
             <template slot="title">
               <Icon type="ios-stats"/>学生培养
             </template>
-            <MenuItem name="4-1">本科生培养</MenuItem>
-            <MenuItem name="4-2">课程设置</MenuItem>
+            <MenuItem name="/training" to="/students/training">本科生培养</MenuItem>
+            <MenuItem name="/curriculum" to="/students/curriculum">课程设置</MenuItem>
           </Submenu>
-          <Submenu name="5">
+          <Submenu name="/research" to="/research">
             <template slot="title">
               <Icon type="ios-stats"/>学术研究
             </template>
-            <MenuItem name="5-1">科研成果</MenuItem>
-            <MenuItem name="5-2">研究中心</MenuItem>
-            <MenuItem name="5-3">学术活动</MenuItem>
+            <MenuItem name="/achievement" to="/research/achievement">科研成果</MenuItem>
+            <MenuItem name="/research" to="/research/research">研究中心</MenuItem>
+            <MenuItem name="/academic" to="/research/academic">学术活动</MenuItem>
           </Submenu>
-          <Submenu name="6">
+          <Submenu name="/enandem" to="enandem">
             <template slot="title">
               <Icon type="ios-stats"/>招生就业
             </template>
-            <MenuItem name="6-1">就业信息</MenuItem>
-            <MenuItem name="6-2">招生信息</MenuItem>
+            <MenuItem name="/enrollment" to="enandem/enrollment">就业信息</MenuItem>
+            <MenuItem name="/employment" to="enandem/employment">招生信息</MenuItem>
           </Submenu>
-          <MenuItem name="7">学术论坛</MenuItem>
+          <MenuItem name="/forum" to="/forum">学术论坛</MenuItem>
         </Menu>
       </Col>
     </Row>
@@ -54,7 +53,15 @@
 
 <script>
 export default {
-  name: "DevHeader"
+  name: "DevHeader",
+  data(){
+    return {
+      activename: this.$route.path
+    }
+  },
+  created() {
+    this.activename = this.$route.path
+  }
 };
 </script>
 
@@ -65,5 +72,11 @@ export default {
 .dev-header {
   background: #fff;
   box-shadow: 1px 1px 5px #aaa;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  border: 0;
 }
 </style>

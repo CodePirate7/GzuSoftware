@@ -16,10 +16,6 @@
                       </a>
                       <!--<Divider orientation="left" style="font-size:20px;font-weight:bolder;padding-top:20px;">学 院 新 闻</Divider>-->
                       <div>
-                          <!--<div class="dev-news-item">-->
-                              <!--<div class="dev-news-left">这里是图片</div>-->
-                              <!--<div> 这里是列表</div>-->
-                          <!--</div>-->
                           <Row :gutter="24" style="margin-bottom: 20px;">
                               <Col span="4">
                                 <div style="background: linear-gradient(33deg, #99E5A2, #C1E3FF);height: 80px;"></div>
@@ -76,7 +72,6 @@
 </template>
 
 <script>
-import DevHeader from '@/components/DevHeader.vue'
 import CssCard from '@/components/CssCard.vue'
 import Swiper from '@/components/Swiper.vue'
 export default {
@@ -87,7 +82,7 @@ export default {
         }
   },
   components: {
-      DevHeader,CssCard,Swiper
+      CssCard,Swiper
   }
 }
 </script>

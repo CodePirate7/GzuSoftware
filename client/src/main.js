@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 import './plugins/iview.js'
 
+//公共组件
+import DevHeader from './components/DevHeader'
+Vue.component('DevHeader',DevHeader)
+
 Vue.config.productionTip = false
 
 new Vue({
@@ -12,6 +16,7 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
+//路由守卫
 router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title

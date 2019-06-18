@@ -22,9 +22,13 @@ export default new Router({
       }
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/forum',
+      name: 'DevForum',
+      component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForum.vue')
+    },
+    {
+      path:'/detail',
+      component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue')
     }
   ]
 })
