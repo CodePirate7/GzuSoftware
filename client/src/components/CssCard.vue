@@ -36,42 +36,6 @@
         </div>
       </div>
     </a>
-    <a class="card" href="#!">
-      <div class="front" style="background: linear-gradient(33deg, #99E5A2, #C1E3FF)">
-        <p>Lorem ipsum dolor sit amet consectetur adipisi.</p>
-      </div>
-      <div class="back">
-        <div>
-          <p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-          <p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p>
-          <button class="button">了解详情</button>
-        </div>
-      </div>
-    </a>
-    <a class="card" href="#!">
-      <div class="front" style="background: linear-gradient(33deg, #99E5A2, #C1E3FF)">
-        <p>Lorem ipsum dolor sit amet consectetur adipisi.</p>
-      </div>
-      <div class="back">
-        <div>
-          <p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-          <p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p>
-          <button class="button">了解详情</button>
-        </div>
-      </div>
-    </a>
-    <a class="card" href="#!">
-      <div class="front" style="background: linear-gradient(33deg, #99E5A2, #C1E3FF)">
-        <p>Lorem ipsum dolor sit amet consectetur adipisi.</p>
-      </div>
-      <div class="back">
-        <div>
-          <p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-          <p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p>
-          <button class="button">了解详情</button>
-        </div>
-      </div>
-    </a>
   </div>
 </template>
 
@@ -130,8 +94,8 @@ export default {
   cursor: pointer;
   width: calc(33% - 2rem);
   min-width: calc(33% - 2rem);
-  height: 400px;
-  min-height: 400px;
+  height: 300px;
+  min-height: 300px;
   perspective: 1000px;
   margin: 1rem;
   position: relative;
