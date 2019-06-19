@@ -29,6 +29,10 @@ export default new Router({
     {
       path:'/detail',
       component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue')
+    },
+    {
+      path: '/add',
+      component: () => import(/* webpackChunkName: "about" */ './views/forum/DevAdd.vue'),
     }
   ]
 })

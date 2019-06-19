@@ -4,9 +4,13 @@ import router from './router'
 import store from './store'
 import './plugins/iview.js'
 
+
 //公共组件
 import DevHeader from './components/DevHeader'
 Vue.component('DevHeader',DevHeader)
+
+//插件
+
 
 Vue.config.productionTip = false
 

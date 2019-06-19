@@ -47,14 +47,11 @@
 										{{item.name}}
 									</span>
                                         <span class="dev-time">
-										{{item.time}}
+										<Time :time="item.time"></Time>
 									</span>
                                     </div>
                                     <div class="">
-                                        <!--<vue-markdown :source="item.comment" v-highlight>-->
-                                        <!--</vue-markdown>-->
-                                        {{item.comment}}
-<!--                                        <Markdown :content="item.comment" :highlight="highlight" v-highlight></Markdown>-->
+                                        <div v-html="item.comment"></div>
                                     </div>
                                     <div class="dev-issue-comment-reply">
                                         <Tooltip content="回复" placement="top">
@@ -74,13 +71,19 @@
                                     </Poptip>
                                 </div>
                             </div>
+
                             <div class="dev-issue-main-content">
-                                <Card shadow>
-                                    <i-editor :value="content" v-model='content' placeholder="在这里评论,右下角可将文本域拉长." :autosize="{minRows: 6}"></i-editor>
-                                    <div class="dev-issue-comment-footer">
-                                        <Button :disabled="disabled" type="success" @click="sub">回复</Button>
-                                    </div>
-                                </Card>
+                                <mavon-editor
+                                        ref="editor"
+                                        v-model="value"
+                                        :toolbars="markdownOption"
+                                        :subfield="false"
+                                        placeholder="在这里编辑markdown,右上角开启双栏可实时预览."
+                                ></mavon-editor>
+
+                                <div class="dev-issue-comment-footer">
+                                    <Button type="primary" @click="sub">回复</Button>
+                                </div>
                             </div>
                         </div>
                     </Col>
@@ -90,11 +93,38 @@
 </template>
 
 <script>
+    import {mavonEditor} from 'mavon-editor'
+    import 'mavon-editor/dist/css/index.css'
     export default {
         name:'detail',
+        created(){
+
+        },
         data(){
             return {
-                content:'# 试试',
+                markdownOption:{
+                    code: true,
+                    table: true,
+                    help:true,
+                    subfield: true, // 单双栏模式
+                    fullscreen: true, // 全屏编辑
+                    ol: true, // 有序列表
+                    ul: true, // 无序列表
+                    link: true, // 链接
+                    imagelink: true, // 图片链接
+                    alignleft: true, // 左对齐
+                    aligncenter: true, // 居中
+                    alignright: true,
+                    underline: true, // 下划线
+                    strikethrough: true, // 中划线
+                    mark: true, // 标记
+                    superscript: true, // 上角标
+                    subscript: true, // 下角标
+                    quote: true, // 引用
+                },
+                id:3,
+                value:'',
+                time:'',
                 comments:[
                     {
                         name: '用户一号',
@@ -115,25 +145,22 @@
             }
         },
         computed:{
-            disabled(){
-                if( this.content == '' ) return true
-                return false
-            }
         },
         methods: {
             sub(){
-                let id = this.comments.length
-                this.comments.push( {
+                let editor = this.$refs.editor
+                let id = this.id
+                this.time = new Date().getTime()
+                this.comments.push({
                     name: `用户${id+1}号`,
-                    comment: this.content,
-                    time: new Date()
-                } )
-                this.content = '# 试试'
-
-            },
-            highlight(code){
-                return code;
+                    comment: editor.d_render,
+                    time: this.time
+                })
+                this.value = ''
             }
+        },
+        components:{
+            mavonEditor
         }
     }
 </script>
@@ -177,7 +204,7 @@
                 }
             }
             .dev-issue-comment-footer{
-                padding: 0 12px 12px;
+                margin-top: 10px;
                 text-align: right;
             }
         }
