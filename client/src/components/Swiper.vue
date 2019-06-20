@@ -72,7 +72,6 @@
     }
     .swiper{
         margin: 10px auto;
-        padding-top: 65px;
         perspective: 500px;
         width: 100%;
         background: transparent;

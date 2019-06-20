@@ -77,6 +77,7 @@
                                         v-model="value"
                                         :toolbars="markdownOption"
                                         :subfield="false"
+                                        :autofocus="false"
                                         placeholder="在这里编辑markdown,右上角开启双栏可实时预览."
                                 ></mavon-editor>
 
@@ -168,7 +169,6 @@
     .dev-issue {
         width: 75%;
         margin: 10px auto;
-        padding-top: 65px;
         .dev-issue-main{
 
             .dev-issue-main-avatar{

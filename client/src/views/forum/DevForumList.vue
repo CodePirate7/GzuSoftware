@@ -152,7 +152,6 @@
     .dev-issue{
         width: 90%;
         margin: 10px auto;
-        padding-top: 65px;
 
         .dev-issue-aside{
             margin-bottom: 12px;

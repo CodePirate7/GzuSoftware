@@ -1,6 +1,5 @@
 <template>
     <div>
-        <dev-header></dev-header>
         <div class="container">
             <Breadcrumb>
                 <BreadcrumbItem to="/home">首页</BreadcrumbItem>
@@ -93,8 +92,6 @@
     .container{
         width: 70%;
         margin: 10px auto;
-        padding-top: 65px;
-
         .content{
             border-radius: 10px;
             margin-top:10px;
