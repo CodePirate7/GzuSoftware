@@ -24,16 +24,30 @@ export default new Router({
     {
       path: '/forum',
       name: 'DevForum',
-      component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForum.vue')
+      component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForum.vue'),
+      redirect: '/forum/forumlist',
+      children:[
+        {
+          path: 'forumlist',
+          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumList.vue')
+        },
+        {
+          path: 'add',
+          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevAdd.vue')
+        },
+        {
+          path:'article',
+          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue')
+        }
+      ]
     },
     {
-      path:'/detail',
-      component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue')
-    },
-    {
-      path: '/add',
-      component: () => import(/* webpackChunkName: "about" */ './views/forum/DevAdd.vue'),
+      path:'*',
+      component: () => import(/* webpackChunkName: "about" */ './views/404.vue')
     }
+
+
+
   ]
 })
 

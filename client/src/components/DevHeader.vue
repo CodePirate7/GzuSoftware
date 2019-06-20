@@ -60,7 +60,10 @@ export default {
     }
   },
   created() {
-    this.activename = this.$route.path
+    let path = this.$route.path
+    let index = path.lastIndexOf('/')
+    if( index === 0 ) this.activename = path
+    else this.activename = path.slice(0,index)
   }
 };
 </script>
