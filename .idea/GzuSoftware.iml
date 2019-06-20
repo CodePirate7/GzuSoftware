@@ -8,5 +8,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="@types/koa" level="application" />
+    <orderEntry type="library" name="@types/koa-router" level="application" />
+    <orderEntry type="library" name="@types/node" level="application" />
+    <orderEntry type="library" name="@types/vue2-editor" level="application" />
+    <orderEntry type="library" name="@types/koa-multer" level="application" />
   </component>
 </module>
