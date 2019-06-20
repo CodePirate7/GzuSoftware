@@ -42,6 +42,19 @@ export default new Router({
       ]
     },
     {
+      path: '/school',
+      name: 'school',
+      component: () => import(/* webpackChunkName: "about" */ './views/school/DevSchool.vue'),
+      redirect: '/school/introduction',
+      children: [
+        {
+          path: 'introduction',
+          component: () => import(/* webpackChunkName: "about" */ './views/school/DevIntroduction.vue')
+        }
+      ]
+
+    },
+    {
       path:'*',
       component: () => import(/* webpackChunkName: "about" */ './views/404.vue')
     }

@@ -1,6 +1,5 @@
 <template>
     <div class="about">
-        <dev-header></dev-header>
         <div class="dev-issue">
             <Row :gutter="16">
                 <Col span="24">
