@@ -6,6 +6,9 @@ import axios from 'axios'
 import './plugins/iview.js'
 
 
+
+axios.defaults.baseURL = 'http://47.100.247.85:3000';
+
 Vue.prototype.$axios = axios;
 
 //公共组件

@@ -61,7 +61,7 @@
               let { title, type, summary} = this.formItem;
               let { _id } = $.getStorage('user', 2*60*60*1000).data;
               let value = this.value;
-              this.$axios.post('http://localhost:3000/article/addarticle',{
+              this.$axios.post('/article/addarticle',{
                   title,content,type,summary,value,
                   author: _id
               }).then( res => {

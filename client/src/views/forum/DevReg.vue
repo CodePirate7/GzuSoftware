@@ -82,7 +82,7 @@
         methods: {
             handleSubmit(name) {
                 this.$axios
-                    .post("http://localhost:3000/reg", {
+                    .post("/reg", {
                         data: this.formInline
                     })
                     .then(res => {

@@ -109,7 +109,7 @@
             let { id } = this.$route.params;
             let user = $.getStorage('user',2*60*60*1000).data;
             if( user ) this.isLogin = false;
-            this.$axios.get(`http://localhost:3000/article/${id}`).then( res => {
+            this.$axios.get(`/article/${id}`).then( res => {
                  this.article = res.data.data;
             })
         },
@@ -150,7 +150,7 @@
             sub(){
                 let editor = this.$refs.editor;
                 let user = $.getStorage('user',2*60*60*1000).data;
-                this.$axios.post('http://localhost:3000/article/addcomment',{
+                this.$axios.post('/article/addcomment',{
                     comment: editor.d_render,
                     user,
                     id: this.article._id

@@ -54,7 +54,7 @@
 
             handleSubmit(name) {
                 this.$axios
-                    .post("http://localhost:3000/login", {
+                    .post("/login", {
                         data: this.formInline
                     })
                     .then(res => {

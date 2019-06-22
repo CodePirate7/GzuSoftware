@@ -30,11 +30,14 @@
                             <div class="dev-issue-item-title">
                                 <router-link :to="{ name: 'article', params: { id: item._id }}">{{item.title}}</router-link>
                             </div>
-                            <a href="#" target="_blank" class="dev-issue-item-summary">
+                            <router-link
+                                    class="dev-issue-item-summary"
+                                    :to="{ name: 'article', params: { id: item._id }}">
                                 <div class="dev-issue-item-summary-cover right" style="background-image: url('https://dev-file.iviewui.com/xM14LMsynHq844vHLXuqx7VkO47hX9dO/small');"></div>
-                                <div class="dev-issue-item-summary-content article-container" v-html="item.content">
+                                <div class="dev-issue-item-summary-content article-container"
+                                     v-html="item.content">
                                 </div>
-                            </a>
+                            </router-link>
                             <div class="dev-issue-item-footer">
                                 <div class="dev-issue-item-tags">
                                     <Tag type="border">
@@ -101,7 +104,7 @@
         name: "DevForumList",
         mounted(){
             this.user = $.getStorage('user', 2*60*60*1000).data;
-            this.$axios.get('http://localhost:3000/article').then( res => {
+            this.$axios.get('/article').then( res => {
                 this.articles = res.data;
             })
         },
@@ -131,6 +134,10 @@
         -webkit-line-clamp: 4; //需要显示的行数
         overflow: hidden;
         text-overflow: ellipsis;
+        height: 90px;
+    }
+    .hidden{
+
     }
     .dev-issue{
         width: 90%;
