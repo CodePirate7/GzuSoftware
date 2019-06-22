@@ -7,10 +7,8 @@
 **/
 module.exports = {
   db:{
-    host: '127.0.0.1',
-    user: 'root',
-    password: '123',
-    database: 'koa2_demo1'
+    host: 'localhost:27017',
+    database: 'GzuSoftware'
   },
   port: 3000,
   name: "GzuSoftware"

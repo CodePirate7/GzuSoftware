@@ -1,17 +1,13 @@
-//导入模块
-const Koa = require('koa');
-const Router = require('koa-router');
-const logger = require('koa-logger');
-//跨域
-const cors = require('koa2-cors');
-//处理post参数
-const bodyParser = require('koa-bodyparser');
-//jwt鉴权
-const koajwt = require('koa-jwt');
+const Koa = require('koa'); // http服务
+const logger = require('koa-logger'); //打印请求信息
+const cors = require('koa2-cors'); //设置跨域
+const bodyParser = require('koa-bodyparser'); //处理post参数格式
+const mongoose = require('mongoose'); //mongoose
+// const koajwt = require('koa-jwt');
 
-const { name, port} = require('./config');
+const { name, port,db:{host,database}} = require('./config');
+const { router } = require('./api/api');
 
-const {router} = require('./api/api');
 const app = new Koa();
 
 app.use(logger());
@@ -29,8 +25,8 @@ app.use(bodyParser());
 //       }
 //   })
 // });
-//
-// //设置那些路径需要token验证
+
+//设置那些路径需要token验证
 // app.use(koajwt({
 // 	secret: 'my_token'
 // }).unless({
@@ -44,7 +40,14 @@ app.use(bodyParser());
 //加载路由
 app.use(router.routes());
 
-//启动http服务
-app.listen(port,() => {
-  console.log(`[${name}] 启动成功,端口: ${port} `)
+//链接数据库 启动http服务
+mongoose.connect(`mongodb://${host}/${database}`,{useNewUrlParser:true},(err)=>{
+    if( err ){
+        console.log('数据库链接失败~~');
+        return;
+    }
+    console.log(`[${name}] 数据库连接成功,端口: 27017 `);
+    app.listen(port,() => {
+      console.log(`[${name}] 后台启动成功,端口: ${port} `)
+    });
 });

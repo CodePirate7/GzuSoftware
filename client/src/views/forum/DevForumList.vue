@@ -4,78 +4,35 @@
             <Row :gutter='16'>
                 <Col span="14" offset="2">
                     <div>
-                        <Card shadow style="border-radius: 10px;" class="dev-issue-item dshadow">
+                        <Card   v-for="(item,index) in articles" :key="index"
+                                shadow
+                                style="border-radius: 10px;"
+                                class="dev-issue-item dshadow">
                             <div class="dev-issue-item-user-avatar">
                                 <Poptip trigger="hover" title="Title" content="content">
                                     <a href="#" target="_blank">
-                                <span>
-                                 <Avatar src="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar" size="small"></Avatar>
-                                </span>
+                                    <span>
+                                        <Avatar src="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar" size="small"></Avatar>
+                                    </span>
                                     </a>
                                 </Poptip>
                             </div>
                             <div class="dev-issue-item-user-avatar">
                                 <Poptip trigger="hover" title="Title" content="content">
                                     <a href="#" target="_blank">
-                                        <span class="diamond">Aresn</span>
-                                    </a>
-                                </Poptip>
-                            </div>
-                            <span class="dev-time">
-                07-17 23:27
-              </span>
-                            <div class="dev-issue-item-title">
-                                <a href="/#/forum/article">写给 iView 开发者的一封信</a>
-                            </div>
-                            <a href="/#/forum/article" class="dev-issue-item-summary">
-                                <div class="dev-issue-item-summary-cover right" style="background-image: url('https://dev-file.iviewui.com/xM14LMsynHq844vHLXuqx7VkO47hX9dO/small');"></div>
-                                <div class="dev-issue-item-summary-content">
-                                    你好，亲爱的 iView 开发者（准开发者），很高兴你能使用到我们新上线的 iView 开发者社区。iView 从立项到现在已经经历了两年的时间，7 月  28 日是它两周岁的生日，在这一天，我们荣幸的召开了新品发布会并发布了 iView 3.0。对于初入社区的你，这篇文章将是一个很好的导引，下面就带你玩转 iView Developer。
-                                </div>
-                            </a>
-                            <div class="dev-issue-item-footer">
-                                <div class="dev-issue-item-tags">
-                                    <Tag type="border">
-                    <span>
-                      <img src="https://file.iviewui.com/dev/tag/tag-iview.png" alt="">
-                      iView
-                    </span>
-                                    </Tag>
-                                </div>
-                                <div class="dev-issue-item-footer-comments">
-                                    <Tooltip content="共61条回复">
-                                        <i class="ivu-icon ivu-icon-ios-chatbubbles"></i>61
-                                    </Tooltip>
-                                </div>
-                            </div>
-                        </Card>
-                        <Card  shadow style="border-radius: 10px;" class="dev-issue-item dshadow">
-                            <div class="dev-issue-item-user-avatar">
-                                <Poptip trigger="hover" title="Title" content="content">
-                                    <a href="#" target="_blank">
-                    <span>
-                      <Avatar src="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar" size="small"></Avatar>
-                    </span>
-                                    </a>
-                                </Poptip>
-                            </div>
-                            <div class="dev-issue-item-user-avatar">
-                                <Poptip trigger="hover" title="Title" content="content">
-                                    <a href="#" target="_blank">
-                                        <span class="diamond">Aresn</span>
+                                        <span class="diamond">{{item.author.username}}</span>
                                     </a>
                                 </Poptip>
                             </div>
                             <span class="dev-time">
-                07-17 23:27
-              </span>
+                                <Time :time="item.createAt"></Time>
+                            </span>
                             <div class="dev-issue-item-title">
-                                <a href="#" target="_blank">写给 iView 开发者的一封信</a>
+                                <router-link :to="{ name: 'article', params: { id: item._id }}">{{item.title}}</router-link>
                             </div>
                             <a href="#" target="_blank" class="dev-issue-item-summary">
                                 <div class="dev-issue-item-summary-cover right" style="background-image: url('https://dev-file.iviewui.com/xM14LMsynHq844vHLXuqx7VkO47hX9dO/small');"></div>
-                                <div class="dev-issue-item-summary-content">
-                                    你好，亲爱的 iView 开发者（准开发者），很高兴你能使用到我们新上线的 iView 开发者社区。iView 从立项到现在已经经历了两年的时间，7 月  28 日是它两周岁的生日，在这一天，我们荣幸的召开了新品发布会并发布了 iView 3.0。对于初入社区的你，这篇文章将是一个很好的导引，下面就带你玩转 iView Developer。
+                                <div class="dev-issue-item-summary-content article-container" v-html="item.content">
                                 </div>
                             </a>
                             <div class="dev-issue-item-footer">
@@ -88,6 +45,12 @@
                                     </Tag>
                                 </div>
                                 <div class="dev-issue-item-footer-comments">
+                                    <Tooltip style="margin-right: 10px;">
+                                        <div slot="content">
+                                            阅读数: {{item.views}}
+                                        </div>
+                                        <Icon type="ios-eye" /></i>{{item.views}}
+                                    </Tooltip>
                                     <Tooltip content="共61条回复">
                                         <i class="ivu-icon ivu-icon-ios-chatbubbles"></i>61
                                     </Tooltip>
@@ -98,11 +61,11 @@
                 </Col>
                 <Col span="6">
                     <Affix :offset-top="76">
-                        <Card shadow class="dev-issue-aside dshadow">
+                        <Card shadow class="dev-issue-aside dshadow" v-if="!user">
                             <span style="font-size:14px">登录后即可评论和写文章</span>
                             <!-- <span style="font-size:14px">欢迎你，Aresn。</span> -->
                         </Card>
-                        <Card shadow class="dev-issue-aside ">
+                        <Card shadow class="dev-issue-aside" v-if="!user">
                             <Tabs type="card"
                                   :value="tabsname"
                                   :class="{'dev-issue-aside-tabs': this.tabsname=='login'}"
@@ -115,9 +78,12 @@
                                     <Reg></Reg>
                                 </TabPane>
                             </Tabs>
-
                         </Card>
-                        <Button long type="success" icon="ivu-icon ivu-icon-ios-create-outline" to="/forum/add" shape="circle">
+                        <Card shadow class="dev-issue-aside" v-if="user">
+                            欢迎你, {{user.username}}
+                        </Card>
+                        <Button :disabled="!user"
+                                long type="success" icon="ivu-icon ivu-icon-ios-create-outline" to="/forum/add" shape="circle">
                             写文章
                         </Button>
                     </Affix>
@@ -130,11 +96,20 @@
 <script>
     import Login from './DevLogin'
     import Reg from './DevReg'
+    import $ from '../../libs/util'
     export default {
         name: "DevForumList",
+        mounted(){
+            this.user = $.getStorage('user', 2*60*60*1000).data;
+            this.$axios.get('http://localhost:3000/article').then( res => {
+                this.articles = res.data;
+            })
+        },
         data(){
             return{
-                tabsname: 'login'
+                tabsname: 'login',
+                user: '',
+                articles:''
             }
         },
         components:{
@@ -149,6 +124,14 @@
 </script>
 
 <style scoped lang="less">
+    .article-container {
+        display: -webkit-box;
+        word-break: break-all;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4; //需要显示的行数
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
     .dev-issue{
         width: 90%;
         margin: 10px auto;

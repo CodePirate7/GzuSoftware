@@ -10,8 +10,8 @@
                 <Form :model="formItem" :label-width="80">
                     <FormItem label="帖子类型">
                         <RadioGroup v-model="formItem.type">
-                            <Radio label="question">提问</Radio>
-                            <Radio label="article">文章</Radio>
+                            <Radio label="false">提问</Radio>
+                            <Radio label="true">文章</Radio>
                         </RadioGroup>
                     </FormItem>
                     <FormItem label="标题">
@@ -33,13 +33,14 @@
                     </FormItem>
                     <FormItem label="内容">
                         <mavonEditor ref="editor"
+                                     v-model="value"
                                      :toolbars="markdownOption"
                                      :subfield="false"
                                      placeholder="在这里编辑markdown,右上角开启双栏可实时预览.">
                         </mavonEditor>
                     </FormItem>
                     <FormItem class="right">
-                        <Button type="primary" shape="circle">提交</Button>
+                        <Button type="primary" shape="circle" @click.native="handlesSubmit">提交</Button>
                     </FormItem>
                 </Form>
             </Card>
@@ -50,15 +51,37 @@
 <script>
     import {mavonEditor} from 'mavon-editor'
     import 'mavon-editor/dist/css/index.css'
+    import $ from '../../libs/util'
     export default {
         name: "DevAdd",
+        methods:{
+          handlesSubmit(){
+              let editor = this.$refs.editor;
+              let content = editor.d_render;
+              let { title, type, summary} = this.formItem;
+              let { _id } = $.getStorage('user', 2*60*60*1000).data;
+              let value = this.value;
+              this.$axios.post('http://localhost:3000/article/addarticle',{
+                  title,content,type,summary,value,
+                  author: _id
+              }).then( res => {
+                  let message = res.data.message;
+                  let success = res.data.success;
+                  console.log(message);
+                  if (success) {
+                      this.$Message.success(message);
+                  } else {
+                      this.$Message.error(message);
+                  }
+              });
+          }
+        },
         data(){
             return {
                 formItem: {
-                    type: 'question',
+                    type: "false",
                     title: '',
                     summary:'',
-
                 },
                 markdownOption:{
                     code: true,
@@ -79,7 +102,9 @@
                     superscript: true, // 上角标
                     subscript: true, // 下角标
                     quote: true, // 引用
-                }
+                },
+                value:''
+
             }
         },
         components:{

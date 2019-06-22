@@ -1,95 +1,95 @@
-const Users = require('../models/users') 
-const jwt = require('jsonwebtoken')
+const Users = require('../models/users')
+// const jwt = require('jsonwebtoken')
 
 module.exports = {
-   
-  login: async ( ctx ) => {
-    let user = ctx.request.body.data
-    let result = {
-      success: false,
-      data: null,
-      message: "",
-      token:null
-    }
-    let userResult = await Users.getUserByNameAndPassword(user)
-    console.log( userResult )
-    if( userResult ){
-      if ( user.name === userResult.name ) {
-        result.success = true
-        result.message = "登录成功"
-        result.token = jwt.sign({
-          id: userResult.id,
-          name: userResult.name
-        },"my_token",{ expiresIn: '2h'})
-        result.data = {
-          id: userResult.id,
-          name: userResult.name
-        }
-      } else {
-        result.message = "用户名或密码不正确"
-      }
-    } else {
-      result.message = "用户不存在,请先注册"
-    }
-    if( result.success ){
-      
-    }
+  //查询所有用户
+  showAllUsers: async ( ctx ) => {
+    let result = await Users.find();
     ctx.body = result
   },
-
+  //注册
   reg: async ( ctx ) => {
-    let user = ctx.request.body.data
+    let user = ctx.request.body.data;
     let result = {
       success: false,
       data: null,
       message: ""
     }
-    let existOne = await Users.getUserByName( user )
+    let existOne = await Users.findOne( {username: user.username} )
     if( existOne ){
       result.message = "用户已存在,请重新注册"
       ctx.body = result
       return 
     }
-    let userResult = await Users.create({
-      email: user.mail,
-      password: user.password,
-      name: user.name,
-      create_time: new Date().getTime(),
-      level: 1,
-    })
+    let userresult = await new Users( user ).save()
+    console.log( userresult )
     result.success = true
     result.message = "注册成功"
     ctx.body = result
   },
-
-  user: async ( ctx ) => {
+  //登录
+  login: async ( ctx ) => {
+    let user = ctx.request.body.data;
     let result = {
       success: false,
       data: null,
       message: "",
-      total: 0
+      token:null
     };
-    let userResult = await Users.getAllUsers();
-    result.data = userResult;
-    result.total = userResult.length;
-    result.success = true;
-    result.message = "查询成功"
+    let userResult = await Users.findOne({username: user.username});
+    console.log( userResult )
+    if( userResult ){
+      if ( user.username === userResult.username ) {
+        result.success = true;
+        result.message = "登录成功";
+        result.data = userResult;
+        // result.token = jwt.sign({
+        //   id: userResult._id,
+        //   username: userResult.username
+        // },"my_token",{ expiresIn: '2h'});
+      } else {
+        result.message = "用户名或密码不正确";
+      }
+    } else {
+      result.message = "用户不存在,请先注册";
+    }
     ctx.body = result;
   },
-
+  //根据 username 查询用户
   findOneByName: async ( ctx ) => {
-    //获取动态路由传值
     let { name } = ctx.params;
     let result = {
       success: false,
       data: null,
       message: ""
     };
-    let userResult = await Users.getUserByName( name );
+    let userResult = await Users.findOne( {username: name} );
+    if ( userResult ){
+      result.data = userResult;
+      result.success = true;
+      result.message = "操作成功";
+    } else{
+      result.success = false;
+      result.message = "未找到";
+    }
     result.data = userResult;
     result.success = true;
     result.message = "查询成功"
     ctx.body = result;
+  },
+  //删除指定用户
+  deleteOneByName: async ( ctx ) => {
+    let { name } = ctx.params;
+    console.log( name )
+    let result = {
+      success: false,
+      data: null,
+      message: ""
+    };
+    let userResult = await Users.remove( {username: name} );
+    result.data = userResult;
+    result.success = true;
+    result.message = `操作成功,共删除 ${userResult.n} 条数据`;
+    ctx.body = result;
   }
-
-};
+}

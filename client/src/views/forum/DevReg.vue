@@ -2,12 +2,12 @@
     <div id="Reg">
         <Form ref="formInline" :model="formInline" :rules="ruleInline" block class="userform">
             <FormItem prop="user">
-                <Input type="text" v-model="formInline.name" placeholder="请输入用户名">
+                <Input type="text" v-model="formInline.username" placeholder="请输入用户名">
                     <Icon type="ios-person-outline" slot="prepend"></Icon>
                 </Input>
             </FormItem>
             <FormItem prop="mail">
-                <Input v-model="formInline.mail" placeholder="请输入邮箱">
+                <Input v-model="formInline.email" placeholder="请输入邮箱">
                     <Icon type="ios-mail-outline" slot="prepend"/>
                 </Input>
             </FormItem>
@@ -28,7 +28,6 @@
     </div>
 </template>
 <script>
-    import { setTimeout } from "timers";
     export default {
         data() {
             const validatePassCheck = (rule, value, callback) => {
@@ -42,13 +41,13 @@
             };
             return {
                 formInline: {
-                    name: "",
+                    username: "",
                     password: "",
                     passcheck: "",
-                    mail: ""
+                    email: ""
                 },
                 ruleInline: {
-                    name: [
+                    username: [
                         {
                             required: true,
                             message: "请输入用户名",
@@ -69,7 +68,7 @@
                         }
                     ],
                     passcheck: [{ validator: validatePassCheck, trigger: "blur" }],
-                    mail: [
+                    email: [
                         {
                             required: true,
                             message: "Mailbox cannot be empty",
@@ -92,9 +91,9 @@
                         console.log(message);
                         if (success) {
                             this.$Message.success(message);
-                            setTimeout(() => {
-                                this.$router.push({ name: "login" });
-                            }, 2000);
+                            // setTimeout(() => {
+                            //     this.$router.push({ name: "login" });
+                            // }, 2000);
                         } else {
                             this.$Message.error(message);
                         }

@@ -1,60 +1,22 @@
-const db = require('../util/db')
+const mongoose = require('mongoose');
 
-module.exports = {
+//定义用户的数据格式
+const userSchema = new mongoose.Schema({
+    username:String,  //用户名
+    password:String,  //密码
+    email:String,     //邮箱
+    uid:String,        //学号
+    createAt: {        //创建时间
+        type: Date,
+        default: Date.now
+    },
+    isAdmin:{         //是否是管理员
+        type:Boolean,
+        default:false,
+    },
+    pic_url:String
+});
 
-  /**
-   * 创建用户
-   * @param {object} model 用户数据模型
-   * @return {object} sql结果
-   */
-  create: async ( model ) => {
-    let result = await db.insertData( 'users', model )
-    return result
-  },
+//暴露用户的模型
+module.exports = mongoose.model('users',userSchema);
 
-  /**
-   * 通过 name 查找用户
-   * @param {name} name 用户姓名
-   * @return {object | null} sql结果
-   */
-  getUserByName: async ( name ) => {
-    let _sql = `select * from users where name="${name}"`
-    let result = await db.query( _sql )
-    if ( Array.isArray(result) && result.length > 0 ) {
-      result = result[0]
-    } else {
-      result = null
-    }
-    return result
-  },
-
-  /**
-   * 通过 name And password 查找用户
-   * @param {object} model 用户模型
-   * @return {object | null} sql结果
-   */
-  getUserByNameAndPassword: async ( model ) => {
-    let _sql = `
-    select * from users 
-    where name = "${model.name}" 
-    and password = "${model.password}" 
-    limit 1`
-    let result = await db.query( _sql )
-    if ( Array.isArray(result) && result.length > 0 ) {
-      result = result[0]
-    } else {
-      result = null
-    }
-    return result
-  },
-
-  /**
-   * 查询 users 表中所有数据
-   * @param { null }
-   * @return {object | null} sql结果
-   */
-  getAllUsers: async (  ) => {
-    let result = await db.selectDataAll( 'users' )
-    return result
-  }
-}

@@ -2,7 +2,7 @@
     <div id="Login">
         <Form ref="formInline" :model="formInline" :rules="ruleInline" block class="userform">
             <FormItem prop="user">
-                <Input type="text" v-model="formInline.name" placeholder="用户名">
+                <Input type="text" v-model="formInline.username" placeholder="用户名">
                     <Icon type="ios-person-outline" slot="prepend"></Icon>
                 </Input>
             </FormItem>
@@ -18,15 +18,16 @@
     </div>
 </template>
 <script>
+    import $ from '../../libs/util'
     export default {
         data() {
             return {
                 formInline: {
-                    name: "",
+                    username: "",
                     password: ""
                 },
                 ruleInline: {
-                    name: [
+                    username: [
                         {
                             required: true,
                             message: "请输入用户名",
@@ -50,6 +51,7 @@
             };
         },
         methods: {
+
             handleSubmit(name) {
                 this.$axios
                     .post("http://localhost:3000/login", {
@@ -58,19 +60,11 @@
                     .then(res => {
                         let message = res.data.message;
                         let success = res.data.success;
-                        console.log(message);
                         if (success) {
                             this.$Message.success(message);
-                            let user = {
-                                id: res.data.data.id,
-                                name: res.data.data.name
-                            };
-                            localStorage.setItem("user", JSON.stringify(user));
-                            localStorage.setItem("token", res.data.token);
-                            localStorage.setItem("token_exp", new Date().getTime());
-                            setTimeout(() => {
-                                this.$router.push({ name: "home" });
-                            }, 2000);
+                            let user = res.data.data;
+                            $.setStorage( "user", user );
+                            location.reload();
                         } else {
                             this.$Message.error(message);
                         }

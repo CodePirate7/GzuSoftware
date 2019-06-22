@@ -6,7 +6,7 @@
                         <div class="dev-issue-main">
                             <div class="dev-issue-main-avatar">
                                 <div class="dev-user-pop">
-                                    <Poptip trigger="hover" title="Title" content="content">
+                                    <Poptip trigger="hover" :title="article.author.username" content="content">
                                         <a href="#" target="_blank">
                                             <Avatar shape="square" size="large" src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
                                         </a>
@@ -15,16 +15,22 @@
                             </div>
                             <div class="dev-issue-main-content">
                                 <Card shadow>
+                                    <div style="margin-bottom: 5px;">
+                                        <h2>{{article.title}}</h2>
+                                    </div>
                                     <div class="dev-issue-main-content-info">
-								<span class="dev-userinfo">
-										玖伍陈海天
-									</span>
+                                        <span class="dev-userinfo">
+                                            {{article.author.username}}
+                                        </span>
                                         <span class="dev-time">
-										07-28 16:01
-									</span>
+                                            <Time :time="article.createAt"></Time>
+                                        </span>
                                     </div>
                                     <div class="dev-md dev-article-content">
-                                        <p>我是帖子内容</p>
+                                        <div v-html="article.content"></div>
+                                    </div>
+                                    <div style="text-align: right;font-size: 12px;">
+                                        阅读数: {{article.views}}
                                     </div>
                                 </Card>
                             </div>
@@ -32,7 +38,7 @@
                         <div v-for="(item,index) in comments" :key="index" class="dev-issue-main dev-issue-comment tail">
                             <div class="dev-issue-main-avatar">
                                 <div class="dev-user-pop">
-                                    <Poptip trigger="hover" title="Title" content="content">
+                                    <Poptip trigger="hover" :title="item.user.username" content="content">
                                         <a href="#" target="_blank">
                                             <Avatar shape="square" size="large" src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
                                         </a>
@@ -43,14 +49,14 @@
                                 <Card shadow>
                                     <div class="dev-issue-main-content-info">
 									<span class="dev-userinfo">
-										{{item.name}}
+										{{item.user.username}}
 									</span>
                                         <span class="dev-time">
-										<Time :time="item.time"></Time>
+										<Time :time="item.createAt"></Time>
 									</span>
                                     </div>
                                     <div class="">
-                                        <div v-html="item.comment"></div>
+                                        <div v-html="item.content"></div>
                                     </div>
                                     <div class="dev-issue-comment-reply">
                                         <Tooltip content="回复" placement="top">
@@ -63,7 +69,7 @@
                         <div class="dev-issue-main dev-issue-comment">
                             <div class="dev-issue-main-avatar">
                                 <div class="dev-user-pop">
-                                    <Poptip trigger="hover" title="Title" content="content">
+                                    <Poptip trigger="hover" :title="article.author.username" content="content">
                                         <a href="#" target="_blank">
                                             <Avatar shape="square" size="large" src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
                                         </a>
@@ -82,7 +88,8 @@
                                 ></mavon-editor>
 
                                 <div class="dev-issue-comment-footer">
-                                    <Button type="primary" @click="sub">回复</Button>
+                                    <Button :disabled="isLogin"
+                                            type="primary" @click="sub">回复</Button>
                                 </div>
                             </div>
                         </div>
@@ -95,10 +102,16 @@
 <script>
     import {mavonEditor} from 'mavon-editor'
     import 'mavon-editor/dist/css/index.css'
+    import $ from '../../libs/util'
     export default {
         name:'detail',
-        created(){
-
+        mounted(){
+            let { id } = this.$route.params;
+            let user = $.getStorage('user',2*60*60*1000).data;
+            if( user ) this.isLogin = false;
+            this.$axios.get(`http://localhost:3000/article/${id}`).then( res => {
+                 this.article = res.data.data;
+            })
         },
         data(){
             return {
@@ -122,41 +135,38 @@
                     subscript: true, // 下角标
                     quote: true, // 引用
                 },
-                id:3,
+                article:'',
                 value:'',
-                time:'',
-                comments:[
-                    {
-                        name: '用户一号',
-                        comment: '第一个支持一下',
-                        time: '07-28 16:01'
-                    },
-                    {
-                        name: '用户二号',
-                        comment: '第二个支持一下',
-                        time: '07-28 16:01'
-                    },
-                    {
-                        name: '用户三号',
-                        comment: '第三个支持一下',
-                        time: '07-28 16:01'
-                    }
-                ]
+                comment:'',
+                isLogin:true
             }
         },
         computed:{
+            comments(){
+                return this.article.comment;
+            }
         },
         methods: {
             sub(){
-                let editor = this.$refs.editor
-                let id = this.id
-                this.time = new Date().getTime()
-                this.comments.push({
-                    name: `用户${id+1}号`,
+                let editor = this.$refs.editor;
+                let user = $.getStorage('user',2*60*60*1000).data;
+                this.$axios.post('http://localhost:3000/article/addcomment',{
                     comment: editor.d_render,
-                    time: this.time
-                })
-                this.value = ''
+                    user,
+                    id: this.article._id
+                }).then( res => {
+                    let message = res.data.message;
+                    let success = res.data.success;
+                    this.article = res.data.data;
+                    console.log( res.data.data )
+                    if (success) {
+                        this.$Message.success(message);
+                    } else {
+                        this.$Message.error(message);
+                    }
+                    this.value = '';
+                } );
+
             }
         },
         components:{

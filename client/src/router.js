@@ -38,6 +38,11 @@ export default new Router({
         {
           path:'article',
           component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue')
+        },
+        {
+          path:':id',
+          name:'article',
+          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue')
         }
       ]
     },
