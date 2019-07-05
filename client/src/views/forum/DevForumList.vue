@@ -9,7 +9,7 @@
                                 style="border-radius: 10px;"
                                 class="dev-issue-item dshadow">
                             <div class="dev-issue-item-user-avatar">
-                                <Poptip trigger="hover" title="Title" content="content">
+                                <Poptip trigger="hover" :title="item.author.username">
                                     <a href="#" target="_blank">
                                     <span>
                                         <Avatar src="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar" size="small"></Avatar>
@@ -33,18 +33,17 @@
                             <router-link
                                     class="dev-issue-item-summary"
                                     :to="{ name: 'article', params: { id: item._id }}">
-                                <div class="dev-issue-item-summary-cover right" style="background-image: url('https://dev-file.iviewui.com/xM14LMsynHq844vHLXuqx7VkO47hX9dO/small');"></div>
                                 <div class="dev-issue-item-summary-content article-container"
-                                     v-html="item.content">
+                                     v-html="item.content"
+                                >
                                 </div>
                             </router-link>
                             <div class="dev-issue-item-footer">
                                 <div class="dev-issue-item-tags">
                                     <Tag type="border">
-                    <span>
-                      <img src="https://file.iviewui.com/dev/tag/tag-iview.png" alt="">
-                      iView
-                    </span>
+                                        <span>
+                                            {{item.type}}
+                                        </span>
                                     </Tag>
                                 </div>
                                 <div class="dev-issue-item-footer-comments">
@@ -54,8 +53,8 @@
                                         </div>
                                         <Icon type="ios-eye" /></i>{{item.views}}
                                     </Tooltip>
-                                    <Tooltip content="共61条回复">
-                                        <i class="ivu-icon ivu-icon-ios-chatbubbles"></i>61
+                                    <Tooltip :content="'共 '+item.comment.length+' 条回复'">
+                                        <i class="ivu-icon ivu-icon-ios-chatbubbles"></i>{{item.comment.length}}
                                     </Tooltip>
                                 </div>
                             </div>
@@ -106,9 +105,11 @@
             this.user = $.getStorage('user', 2*60*60*1000).data;
             this.$axios.get('/article').then( res => {
                 this.articles = res.data;
+                console.log(res.data);
             })
         },
         data(){
+
             return{
                 tabsname: 'login',
                 user: '',
@@ -128,13 +129,13 @@
 
 <style scoped lang="less">
     .article-container {
-        display: -webkit-box;
-        word-break: break-all;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4; //需要显示的行数
-        overflow: hidden;
-        text-overflow: ellipsis;
-        height: 90px;
+        /*display: -webkit-box;*/
+        /*word-break: break-all;*/
+        /*-webkit-box-orient: vertical;*/
+        /*-webkit-line-clamp: 3; //需要显示的行数*/
+        /*overflow: hidden;*/
+        /*text-overflow: ellipsis;*/
+        max-height: 85px;
     }
     .hidden{
 
@@ -222,3 +223,5 @@
         }
     }
 </style>
+
+

@@ -10,27 +10,30 @@
                 <Form :model="formItem" :label-width="80">
                     <FormItem label="帖子类型">
                         <RadioGroup v-model="formItem.type">
-                            <Radio label="false">提问</Radio>
-                            <Radio label="true">文章</Radio>
+                            <Radio label="提问">提问</Radio>
+                            <Radio label="文章">文章</Radio>
                         </RadioGroup>
                     </FormItem>
                     <FormItem label="标题">
-                        <Input v-model="formItem.title" placeholder="请输入标题"></Input>
+                        <Input v-model="formItem.title"
+                               placeholder="请输入标题"
+                               required
+                        ></Input>
                     </FormItem>
-                    <FormItem label="文章配图" v-if="formItem.type == 'article'">
-                        <Upload action="">
-                            <Button icon="ios-cloud-upload-outline">上传图片</Button>
-                        </Upload>
-                    </FormItem>
-                    <FormItem label="摘要" v-if="formItem.type == 'article'">
-                        <mavonEditor ref="editor"
-                                     :toolbarsFlag="false"
-                                     :subfield="false"
-                                     placeholder="在这里写摘要,支持markdown语法"
-                                     style="min-height: 100px;"
-                        >
-                        </mavonEditor>
-                    </FormItem>
+<!--                    <FormItem label="文章配图" v-if="formItem.type == '文章'">-->
+<!--                        <Upload action="">-->
+<!--                            <Button icon="ios-cloud-upload-outline">上传图片</Button>-->
+<!--                        </Upload>-->
+<!--                    </FormItem>-->
+<!--                    <FormItem label="摘要" v-if="formItem.type == '文章'">-->
+<!--                        <mavonEditor ref="editor"-->
+<!--                                     :toolbarsFlag="false"-->
+<!--                                     :subfield="false"-->
+<!--                                     placeholder="在这里写摘要,支持markdown语法"-->
+<!--                                     style="min-height: 100px;"-->
+<!--                        >-->
+<!--                        </mavonEditor>-->
+<!--                    </FormItem>-->
                     <FormItem label="内容">
                         <mavonEditor ref="editor"
                                      v-model="value"
@@ -62,16 +65,18 @@
               let { _id } = $.getStorage('user', 2*60*60*1000).data;
               let value = this.value;
               this.$axios.post('/article/addarticle',{
-                  title,content,type,summary,value,
+                  title,content,type,value,
                   author: _id
               }).then( res => {
-                  let message = res.data.message;
-                  let success = res.data.success;
-                  console.log(message);
-                  if (success) {
-                      this.$Message.success(message);
+                  let { success } = res.data;
+                  let { message } = res.data;
+                  if ( success ) {
+                      this.$Message.success( message );
+                      setTimeout(()=>{
+                          this.$router.push({path:'/forum/forumlist'});
+                      },1000)
                   } else {
-                      this.$Message.error(message);
+                      this.$Message.error( message );
                   }
               });
           }
@@ -79,7 +84,7 @@
         data(){
             return {
                 formItem: {
-                    type: "false",
+                    type: "提问",
                     title: '',
                     summary:'',
                 },

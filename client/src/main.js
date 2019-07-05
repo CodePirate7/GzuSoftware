@@ -7,7 +7,8 @@ import './plugins/iview.js'
 
 
 
-axios.defaults.baseURL = 'http://47.100.247.85:3000';
+// axios.defaults.baseURL = 'http://47.100.247.85:3000';
+axios.defaults.baseURL = 'http://localhost:3000';
 
 Vue.prototype.$axios = axios;
 
