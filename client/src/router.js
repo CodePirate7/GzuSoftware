@@ -38,11 +38,6 @@ export default new Router({
         {
           path:'article',
           component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue')
-        },
-        {
-          path:':id',
-          name:'article',
-          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue')
         }
       ]
     },
@@ -55,10 +50,95 @@ export default new Router({
         {
           path: 'introduction',
           component: () => import(/* webpackChunkName: "about" */ './views/school/DevIntroduction.vue')
+        },
+        {
+            path: 'structure',
+            component: () => import(/* webpackChunkName: "about" */ './views/school/DevStructure.vue')
+        },
+        {
+            path: 'partner',
+            component: () => import(/* webpackChunkName: "about" */ './views/school/DevPartner.vue')
         }
       ]
 
     },
+
+        {
+        path: '/workers',
+        name: 'school',
+        component: () => import(/* webpackChunkName: "about" */ './views/workers/DevWorkers.vue'),
+            redirect: '/workers/teaching',
+        children: [
+            {
+                path: 'teaching',
+                component: () => import(/* webpackChunkName: "about" */ './views/workers/DevTeaching.vue')
+            },
+            {
+                path: 'administrative',
+                component: () => import(/* webpackChunkName: "about" */ './views/workers/DevAdministrative.vue')
+            }
+
+
+        ]
+
+        },
+
+        {
+            path: '/students',
+            name: 'students',
+            component: () => import(/* webpackChunkName: "about" */ './views/students/DevStudents.vue'),
+            redirect: '/students/training',
+            children: [
+                {
+                    path: 'training',
+                    component: () => import(/* webpackChunkName: "about" */ './views/students/DevTraining.vue')
+                },
+                {
+                    path: 'curriculum',
+                    component: () => import(/* webpackChunkName: "about" */ './views/students/DevCurriculum.vue')
+                }
+
+            ]
+        },
+
+        {
+            path: '/research',
+            name: 'research',
+            component: () => import(/* webpackChunkName: "about" */ './views/research/DevRes.vue'),
+            redirect: '/research/achievement',
+            children: [
+                {
+                    path: 'achievement',
+                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevAchievement.vue')
+                },
+                {
+                    path: 'research',
+                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevResearch.vue')
+                },
+                {
+                    path: 'academic',
+                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevAcademic.vue')
+                }
+            ]
+        },
+
+        {
+            path: '/enandem',
+            name: 'enandem',
+            component: () => import(/* webpackChunkName: "about" */ './views/enandem/DevEnandem.vue'),
+            redirect: '/enandem/enrollment',
+            children: [
+                {
+                    path: 'enrollment',
+                    component: () => import(/* webpackChunkName: "about" */ './views/enandem/DevEnrollment.vue')
+                },
+                {
+                    path: 'employment',
+                    component: () => import(/* webpackChunkName: "about" */ './views/enandem/DevEmployment.vue')
+                }
+            ]
+        },
+
     {
       path:'*',
       component: () => import(/* webpackChunkName: "about" */ './views/404.vue')

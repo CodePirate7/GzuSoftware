@@ -35,7 +35,7 @@
 
     .container{
         width: 90%;
-        margin: 1px auto;
+        margin: 5px auto;
 
         .img{
             background: linear-gradient(33deg, #99E5A2, #C1E3FF);

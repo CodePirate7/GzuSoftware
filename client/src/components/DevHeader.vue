@@ -52,13 +52,13 @@
                 <MenuItem name="/academic" to="/research/academic">学术活动</MenuItem>
               </Submenu>
             </MenuItem>
-            <MenuItem name="/enandem" to="enandem">
-              <Submenu name="/enandem" to="enandem">
+            <MenuItem name="/enandem" to="/enandem">
+              <Submenu name="/enandem" to="/enandem">
                 <template slot="title">
                   <Icon type="ios-stats"/>招生就业
                 </template>
-                <MenuItem name="/enrollment" to="enandem/enrollment">就业信息</MenuItem>
-                <MenuItem name="/employment" to="enandem/employment">招生信息</MenuItem>
+                <MenuItem name="/enrollment" to="/enandem/enrollment">就业信息</MenuItem>
+                <MenuItem name="/employment" to="/enandem/employment">招生信息</MenuItem>
               </Submenu>
             </MenuItem>
             <MenuItem name="/forum" to="/forum">
