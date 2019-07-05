@@ -1,20 +1,14 @@
-<template>
+﻿<template>
     <div class="container">
         <!--        <div class="img"></div>-->
         <Layout>
             <Sider class="sider" width="240">
-                <Menu class="sider-menu" active-name="/introduction">
-                    <MenuItem name="/introduction" to="introduction">
-                        学院简介
+                <Menu  class="sider-menu" active-name="/training">
+                    <MenuItem name="/training" to="training">
+                        本科生培养
                     </MenuItem>
-                    <MenuItem name="/structure" to="structure">
-                        组织结构
-                    </MenuItem>
-                    <MenuItem name="/partner" to="partner">
-                        校企合作
-                    </MenuItem>
-                    <MenuItem name="/contact" to="contact">
-                        联系我们
+                    <MenuItem name="/curriculum" to="curriculum">
+                        课程设置
                     </MenuItem>
                 </Menu>
             </Sider>
@@ -27,12 +21,11 @@
 
 <script>
     export default {
-        name: "DevLayout"
+        
     }
 </script>
 
 <style scoped lang="less">
-
     .container{
         width: 90%;
         margin: 5px auto;
@@ -42,7 +35,7 @@
             height: 150px;
         }
         .sider{
-            position: absolute;
+            position: fixed;
             height: 100%;
             overflow: auto;
             z-index: 1;
@@ -58,4 +51,7 @@
             padding: 16px;
         }
     }
+    
+   
+
 </style>

@@ -3,18 +3,15 @@
         <!--        <div class="img"></div>-->
         <Layout>
             <Sider class="sider" width="240">
-                <Menu class="sider-menu" active-name="/introduction">
-                    <MenuItem name="/introduction" to="introduction">
-                        学院简介
+                <Menu  class="sider-menu" active-name="/achievement">
+                    <MenuItem name="/achievement" to="achievement">
+                        科研成果
                     </MenuItem>
-                    <MenuItem name="/structure" to="structure">
-                        组织结构
+                    <MenuItem name="/research" to="research">
+                        研究中心
                     </MenuItem>
-                    <MenuItem name="/partner" to="partner">
-                        校企合作
-                    </MenuItem>
-                    <MenuItem name="/contact" to="contact">
-                        联系我们
+                    <MenuItem name="/academic" to="academic">
+                        学术活动
                     </MenuItem>
                 </Menu>
             </Sider>
@@ -42,7 +39,7 @@
             height: 150px;
         }
         .sider{
-            position: absolute;
+            position: fixed;
             height: 100%;
             overflow: auto;
             z-index: 1;

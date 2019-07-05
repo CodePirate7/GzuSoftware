@@ -11,12 +11,12 @@
         <Col span="20" offset="2">
           <Menu mode="horizontal" :active-name="activename">
             <MenuItem name="/home" to="/home">
-              <Icon type="ios-paper"/>首页
+                <Icon type="md-home" />首页
             </MenuItem>
             <MenuItem name="/school" to="/school">
               <Submenu name="/school" style="padding: 0;">
                 <template slot="title">
-                  <Icon type="ios-stats"/>学院概况
+                    <Icon type="logo-buffer" />学院概况
                 </template>
                 <MenuItem name="/introduction" to="/school/introduction" >学院简介</MenuItem>
                 <MenuItem name="/structure" to="/school/structure">组织结构</MenuItem>
@@ -27,7 +27,7 @@
             <MenuItem name="/workers" to="/workers">
               <Submenu name="/workers" to="/workers">
                 <template slot="title">
-                  <Icon type="ios-stats"/>学院人员
+                    <Icon type="ios-people" />学院人员
                 </template>
                 <MenuItem name="/teaching" to="/workers/teaching">教学研究人员</MenuItem>
                 <MenuItem name="/administrative" to="/workers/administrative">行政人员</MenuItem>
@@ -36,7 +36,7 @@
             <MenuItem name="/students" to="/students">
               <Submenu name="/students" to="/students">
                 <template slot="title">
-                  <Icon type="ios-stats"/>学生培养
+                    <Icon type="md-school" />学生培养
                 </template>
                 <MenuItem name="/training" to="/students/training">本科生培养</MenuItem>
                 <MenuItem name="/curriculum" to="/students/curriculum">课程设置</MenuItem>
@@ -45,7 +45,7 @@
             <MenuItem name="/research" to="/research">
               <Submenu name="/research" to="/research">
                 <template slot="title">
-                   <Icon type="md-pulse" />学术研究
+                    <Icon type="md-flask" />学术研究
                 </template>
                 <MenuItem name="/achievement" to="/research/achievement">科研成果</MenuItem>
                 <MenuItem name="/research" to="/research/research">研究中心</MenuItem>
@@ -55,14 +55,14 @@
             <MenuItem name="/enandem" to="/enandem">
               <Submenu name="/enandem" to="/enandem">
                 <template slot="title">
-                 <Icon type="md-pulse" />招生就业
+                    <Icon type="md-pulse" />招生就业
                 </template>
                 <MenuItem name="/enrollment" to="/enandem/enrollment">就业信息</MenuItem>
                 <MenuItem name="/employment" to="/enandem/employment">招生信息</MenuItem>
               </Submenu>
             </MenuItem>
             <MenuItem name="/forum" to="/forum">
-              <Icon type="ios-stats"/>学术论坛
+                <Icon type="md-chatbubbles" />学术论坛
             </MenuItem>
           </Menu>
         </Col>

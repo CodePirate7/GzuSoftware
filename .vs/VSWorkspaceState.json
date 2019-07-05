@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\src",
+    "\\client\\src\\views",
+    "\\client\\src\\views\\school",
+    "\\client\\src\\views\\students",
+    "\\client\\src\\views\\workers"
+  ],
+  "SelectedNode": "\\client\\src\\views\\students\\DevLayout.vue",
+  "PreviewInSolutionExplorer": false
+}
