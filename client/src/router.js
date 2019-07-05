@@ -37,6 +37,7 @@ export default new Router({
         },
         {
           path:'article',
+          name:'article',
           component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue')
         }
       ]
