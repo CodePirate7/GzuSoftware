@@ -45,7 +45,7 @@
             <MenuItem name="/research" to="/research">
               <Submenu name="/research" to="/research">
                 <template slot="title">
-                  <Icon type="ios-stats"/>学术研究
+                   <Icon type="md-pulse" />学术研究
                 </template>
                 <MenuItem name="/achievement" to="/research/achievement">科研成果</MenuItem>
                 <MenuItem name="/research" to="/research/research">研究中心</MenuItem>
@@ -55,7 +55,7 @@
             <MenuItem name="/enandem" to="/enandem">
               <Submenu name="/enandem" to="/enandem">
                 <template slot="title">
-                  <Icon type="ios-stats"/>招生就业
+                 <Icon type="md-pulse" />招生就业
                 </template>
                 <MenuItem name="/enrollment" to="/enandem/enrollment">就业信息</MenuItem>
                 <MenuItem name="/employment" to="/enandem/employment">招生信息</MenuItem>
