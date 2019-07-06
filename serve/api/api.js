@@ -27,6 +27,9 @@ router.get('/article', articleService.findAllArticles);
 //通过id查找文章
 router.get('/article/:id', articleService.findArticle);
 
+//文章分页
+router.get('/article/:page/:size', articleService.findPageArticles);
+
 //增加文章
 router.post('/article/addarticle', articleService.add);
 
@@ -35,6 +38,7 @@ router.post('/article/addviews', articleService.addViews);
 
 //增加评论
 router.post('/article/addcomment', articleService.addComment);
+
 
 module.exports = {
   router

@@ -4,7 +4,7 @@
             <Row :gutter='16'>
                 <Col span="14" offset="2">
                     <div>
-                        <Card   v-for="(item,index) in articles" :key="index"
+                        <Card  v-for="(item,index) in articles" :key="index"
                                 shadow
                                 style="border-radius: 10px;"
                                 class="dev-issue-item dshadow">
@@ -60,9 +60,15 @@
                             </div>
                         </Card>
                     </div>
+                    <div style="text-align: center;">
+                        <Page :total="total" show-sizer
+                              @on-change="handleChange"
+                              @on-page-size-change="handleSizeChange"
+                        />
+                    </div>
                 </Col>
                 <Col span="6">
-                    <Affix :offset-top="76">
+                    <Affix :offset-top="10">
                         <Card shadow class="dev-issue-aside dshadow" v-if="!user">
                             <span style="font-size:14px">登录后即可评论和写文章</span>
                             <!-- <span style="font-size:14px">欢迎你，Aresn。</span> -->
@@ -84,6 +90,22 @@
                         <Card shadow class="dev-issue-aside" v-if="user">
                             欢迎你, {{user.username}}
                         </Card>
+                        <Card shadow class="dev-issue-aside">
+                            <p slot="title">
+                                <i class="ivu-icon ivu-icon-ios-options"></i> 帖子选项</p>
+                            <p style="margin-bottom: 10px;">帖子类型</p>
+                            <RadioGroup v-model="formItem.type">
+                                <Radio label="全部">全部</Radio>
+                                <Radio label="提问">提问</Radio>
+                                <Radio label="文章">文章</Radio>
+                            </RadioGroup>
+                            <Divider />
+                            <p>列表样式</p>
+                            <RadioGroup v-model="formItem.listStyle">
+                                <Radio label="普通">普通</Radio>
+                                <Radio label="紧凑">紧凑</Radio>
+                            </RadioGroup>
+                        </Card>
                         <Button :disabled="!user"
                                 long type="success" icon="ivu-icon ivu-icon-ios-create-outline" to="/forum/add" shape="circle">
                             写文章
@@ -103,17 +125,24 @@
         name: "DevForumList",
         mounted(){
             this.user = $.getStorage('user', 2*60*60*1000).data;
-            this.$axios.get('/article').then( res => {
-                this.articles = res.data;
-                console.log(res.data);
+            this.$axios.get('/article/0/10').then( res => {
+                this.articles = res.data.data;
+                this.total = res.data.total;
             })
         },
         data(){
-
             return{
                 tabsname: 'login',
                 user: '',
-                articles:''
+                articles:'',
+                page: 1,
+                pageSize: 10,
+                total: 0,
+                formItem: {
+                    type: "全部",
+                    listStyle:'普通'
+                }
+
             }
         },
         components:{
@@ -122,6 +151,22 @@
         methods:{
             fn( name ){
                 this.tabsname = name
+            },
+            handleChange( page ){
+                this.page = page;
+                this.$axios.get(`/article/${page - 1}/${this.pageSize}`).then( res => {
+                    this.articles = res.data.data;
+                    this.total = res.data.total;
+                    scrollTo(0,0);
+                })
+            },
+            handleSizeChange( size ){
+                this.pageSize = size;
+                this.$axios.get(`/article/${this.page - 1}/${size}`).then( res => {
+                    this.articles = res.data.data;
+                    this.total = res.data.total;
+                    scrollTo(0,0);
+                })
             }
         }
     }
@@ -136,6 +181,9 @@
         /*overflow: hidden;*/
         /*text-overflow: ellipsis;*/
         max-height: 85px;
+    }
+    .ivu-divider-horizontal{
+        margin: 15px 0;
     }
     .hidden{
 

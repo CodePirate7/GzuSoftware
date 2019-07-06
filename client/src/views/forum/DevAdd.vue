@@ -126,7 +126,6 @@
             border-radius: 10px;
             margin-top:10px;
         }
-
         .right{
             text-align: right;
         }

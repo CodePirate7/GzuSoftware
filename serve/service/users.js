@@ -21,10 +21,10 @@ module.exports = {
       ctx.body = result
       return 
     }
-    let userresult = await new Users( user ).save()
-    console.log( userresult )
-    result.success = true
-    result.message = "注册成功"
+    let userresult = await new Users( user ).save();
+    console.log( userresult );
+    result.success = true;
+    result.message = "注册成功";
     ctx.body = result
   },
   //登录
@@ -74,7 +74,7 @@ module.exports = {
     }
     result.data = userResult;
     result.success = true;
-    result.message = "查询成功"
+    result.message = "查询成功";
     ctx.body = result;
   },
   //删除指定用户

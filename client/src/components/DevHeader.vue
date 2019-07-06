@@ -4,7 +4,6 @@
       <div class="container">
         <img src="../assets/LOGO4.png" alt="logo">
       </div>
-
     </div>
     <div class="dev-header">
       <Row>
@@ -94,6 +93,10 @@ export default {
 .ivu-menu-light {
   /*background: transparent;*/
 }
+.ivu-menu-horizontal{
+  height: 45px;
+  line-height: 45px;
+}
 .logo{
   z-index: 51;
   width: 100%;
@@ -110,6 +113,7 @@ export default {
   background: #fff;
   box-shadow: 1px 1px 5px #aaa;
   width: 100%;
+  height: 45px;
   left: 0;
   z-index: 50;
   border: 0;
@@ -120,4 +124,7 @@ export default {
   .ivu-menu-item{
     font-weight: bold;
   }
+.ivu-menu-horizontal.ivu-menu-light:after{
+  display: none;
+}
 </style>
