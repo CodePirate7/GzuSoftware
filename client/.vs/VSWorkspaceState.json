@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\views",
+    "\\src\\views\\workers"
   ],
+  "SelectedNode": "\\src\\views\\workers\\NO.1.png",
   "PreviewInSolutionExplorer": false
 }
