@@ -34,7 +34,7 @@
             height: 150px;
         }
         .sider{
-            position: fixed;
+            position: absolute;
             height: 100%;
             overflow: auto;
             z-index: 1;
