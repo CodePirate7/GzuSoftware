@@ -11,7 +11,7 @@
                         <p slot="title" style="height:160px;" class="name">余文千</p>
                         <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                         <p slot="extra" class="inf">互联网营销与管理金牌导师 / Web全栈资深讲师</p>
-                        <p>邮箱:juancheng2016@qq.com</p>
+                        <p>邮箱:</p>
                     </Card>
                 </div>
                 </Col>
@@ -46,7 +46,7 @@
                         <p slot="title" style="height:160px;" class="name">巴川</p>
                         <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                         <p slot="extra" class="inf">数据挖掘分析资深专家</p>
-                        <p>邮箱:juancheng2016@qq.com</p>
+                        <p>邮箱:</p>
                     </Card>
                 </div>
                 </Col>
@@ -81,7 +81,7 @@
                         <p slot="title" style="height:160px;" class="name">孙逊</p>
                         <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                         <p slot="extra" class="inf">移动云计算金牌导师 / Android金牌导师</p>
-                        <p>邮箱:juancheng2016@qq.com</p>
+                        <p>邮箱:</p>
                     </Card>
                 </div>
                 </Col>
@@ -116,7 +116,7 @@
                         <p slot="title" style="height:160px;" class="name">王鹏</p>
                         <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                         <p slot="extra" class="inf">互联网营销与管理金牌导师</p>
-                        <p>邮箱:juancheng2016@qq.com</p>
+                        <p>邮箱:</p>
                     </Card>
                 </div>
                 </Col>
@@ -151,7 +151,7 @@
                         <p slot="title" style="height:160px;" class="name">关立新</p>
                         <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                         <p slot="extra" class="inf">互联网营销与管理金牌讲师</p>
-                        <p>邮箱:juancheng2016@qq.com</p>
+                        <p>邮箱:</p>
                     </Card>
                 </div>
                 </Col>
@@ -173,7 +173,7 @@
                         <p slot="title" style="height:160px;" class="name">张俊</p>
                         <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                         <p slot="extra" class="inf">系统架构师 / 数据分析与数据挖据工程师 / 12年IT行业研发经验</p>
-                        <p>邮箱:juancheng2016@qq.com</p>
+                        <p>邮箱:</p>
                     </Card>
                 </div>
                 </Col>
@@ -186,7 +186,7 @@
                         <p slot="title" style="height:160px;" class="name">叶风哲</p>
                         <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                         <p slot="extra" class="inf">大数据高级讲师 / 人工智能讲师</p>
-                        <p>邮箱:juancheng2016@qq.com</p>
+                        <p>邮箱:</p>
                     </Card>
                 </div>
                 </Col>
@@ -208,7 +208,7 @@
                         <p slot="title" style="height:160px;" class="name">张立</p>
                         <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                         <p slot="extra" class="inf">互联网产品学院院长</p>
-                        <p>邮箱:juancheng2016@qq.com</p>
+                        <p>邮箱:</p>
                     </Card>
                 </div>
                 </Col>
@@ -221,7 +221,7 @@
                         <p slot="title" style="height:160px;" class="name">张财兵</p>
                         <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                         <p slot="extra" class="inf">Android开发教学总监</p>
-                        <p>邮箱:juancheng2016@qq.com</p>
+                        <p>邮箱:</p>
                     </Card>
                 </div>
                 </Col>

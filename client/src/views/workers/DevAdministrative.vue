@@ -10,7 +10,7 @@
                                 <p slot="title" style="height:160px;" class="name">许道云</p>
                                 <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                                 <p slot="extra" class="inf">贵州大学计算机科学与技术学院院长 / 教授 / 博士生导师 / 专家委员会主任</p>
-                                <p>邮箱:juancheng2016@qq.com</p>
+                                <p>邮箱:</p>
                             </Card>
                         </div>
                         </Col>
@@ -45,7 +45,7 @@
                                 <p slot="title" style="height:160px;" class="name">姜旭平</p>
                                 <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                                 <p slot="extra" class="inf">清华大学教授 / 互联网营销奠基人</p>
-                                <p>邮箱:juancheng2016@qq.com</p>
+                                <p>邮箱:</p>
                             </Card>
                         </div>
                         </Col>
@@ -80,7 +80,7 @@
                                 <p slot="title" style="height:160px;" class="name">方业昌</p>
                                 <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                                 <p slot="extra" class="inf">美国FIU博士 / 慧科集团创始人</p>
-                                <p>邮箱:juancheng2016@qq.com</p>
+                                <p>邮箱:</p>
                             </Card>
                         </div>
                         </Col>
@@ -115,7 +115,7 @@
                                 <p slot="title" style="height:160px;" class="name">管刚</p>
                                 <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                                 <p slot="extra" class="inf">清华大学博士 / 原腾讯教育事业部总经理</p>
-                                <p>邮箱:juancheng2016@qq.com</p>
+                                <p>邮箱:</p>
                             </Card>
                         </div>
                         </Col>
@@ -150,7 +150,7 @@
                                 <p slot="title" style="height:160px;" class="name">李智</p>
                                 <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
                                 <p slot="extra" class="inf">博士 / 副教授</p>
-                                <p>邮箱:juancheng2016@qq.com</p>
+                                <p>邮箱:</p>
                             </Card>
                         </div>
                         </Col>
