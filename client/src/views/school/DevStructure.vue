@@ -1,6 +1,6 @@
 ﻿<template>
     <div class="hh">
-        <dev-layout>
+        <school-layout>
             <h2 align="center">贵州大学省级示范性软件学院组织架构图</h2>
             <br />
             <img src="./Str.png" />
@@ -9,16 +9,16 @@
                     <Icon type="ios-arrow-up" />
                 </div>
             </BackTop>
-        </dev-layout>
+        </school-layout>
     </div>
 </template>
 
 <script>
-    import DevLayout from './DevLayout'
+    import SchoolLayout from './SchoolLayout'
     export default {
         name: "DevStructure",
         components:{
-            DevLayout
+            SchoolLayout
         }
     }
 </script>

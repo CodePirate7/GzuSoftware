@@ -1,6 +1,6 @@
 <template>
     <div>
-        <dev-layout>
+        <school-layout>
             <h2 align="center">贵州大学省级示范性软件学院简介</h2>
             <br />
             <p style="text-indent:2em">
@@ -42,16 +42,16 @@
                     <Icon type="ios-arrow-up" />
                 </div>
             </BackTop>
-        </dev-layout>
+        </school-layout>
     </div>
 </template>
 
 <script>
-    import DevLayout from './DevLayout'
+    import SchoolLayout from './SchoolLayout'
     export default {
         name: "DevIntroduction",
         components:{
-            DevLayout
+            SchoolLayout
         }
     }
 </script>

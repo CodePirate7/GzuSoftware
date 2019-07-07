@@ -1,8 +1,6 @@
 ﻿<template>
         <div class="content">
             <dev-layout>
-                <h2 style="margin-left:20px;">行政人员</h2>
-                <br />
                     <Row :gutter="30">
                         <Col span="7">
                         <div style="padding: 20px">

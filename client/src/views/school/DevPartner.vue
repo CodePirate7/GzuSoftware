@@ -1,6 +1,6 @@
 ﻿<template>
     <div>
-        <dev-layout>
+        <school-layout>
             <h2 align="center">慧科集团</h2>
             <br />
             <p style="text-indent:2em">
@@ -129,17 +129,17 @@
                     <Icon type="ios-arrow-up" />
                 </div>
             </BackTop>
-        </dev-layout>
+        </school-layout>
         
     </div>
 </template>
 
 <script>
-    import DevLayout from './DevLayout'
+    import SchoolLayout from './SchoolLayout'
     export default {
         name: "DevPartner",
         components:{
-            DevLayout
+            SchoolLayout
         }
     }
 </script>

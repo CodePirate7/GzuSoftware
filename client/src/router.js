@@ -66,7 +66,7 @@ export default new Router({
 
         {
         path: '/workers',
-        name: 'school',
+        name: 'workers',
         component: () => import(/* webpackChunkName: "about" */ './views/workers/DevWorkers.vue'),
             redirect: '/workers/teaching',
         children: [

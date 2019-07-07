@@ -1,25 +1,29 @@
-﻿<template>
+<template>
     <div class="container">
         <!--        <div class="img"></div>-->
         <Layout>
             <Sider class="sider" width="240">
-               <Affix :offset-top="45">
-                   <Menu class="sider-menu" theme="light" :active-name="activeName" >
-                       <MenuItem name="/workers/teaching"  to="teaching" >
-                           <Icon type="ios-search"></Icon>
-                           <span>教学研究人员</span>
-                       </MenuItem>
-                       <MenuItem name="/workers/administrative" to="administrative" >
-                           <Icon type="ios-search"></Icon>
-                           <span>行政人员</span>
-                       </MenuItem>
-                   </Menu>
-               </Affix>
+                <Affix :offset-top="45">
+                    <Menu class="sider-menu" theme="light" :active-name="activeName" >
+                        <MenuItem name="/school/introduction" to="introduction">
+                            学院简介
+                        </MenuItem>
+                        <MenuItem name="/school/structure" to="structure">
+                            组织结构
+                        </MenuItem>
+                        <MenuItem name="/school/partner" to="partner">
+                            校企合作
+                        </MenuItem>
+                        <MenuItem name="/school/contact" to="contact">
+                            联系我们
+                        </MenuItem>
+                    </Menu>
+                </Affix>
             </Sider>
             <Content class="content">
                 <Breadcrumb>
                     <BreadcrumbItem to="/home">首页</BreadcrumbItem>
-                    <BreadcrumbItem to="/workers/teaching">学院人员</BreadcrumbItem>
+                    <BreadcrumbItem to="/school">学院概况</BreadcrumbItem>
                     <BreadcrumbItem >{{subName}}</BreadcrumbItem>
                 </Breadcrumb>
                 <Card style="margin-top:16px;">
@@ -30,7 +34,8 @@
     </div>
 </template>
 
-<script>export default {
+<script>
+    export default {
         data(){
             return {
                 activeName: this.$route.path,
@@ -40,10 +45,12 @@
         created(){
             this.activeName =  this.$route.path;
             let path =  this.$route.path;
-            if( path.indexOf('teaching') != -1 ) this.subName = "教学研究人员";
-            if( path.indexOf('administrative') != -1 ) this.subName = "行政人员";
+            if( path.indexOf('introduction') != -1 ) this.subName = "学院简介";
+            else if( path.indexOf('structure') != -1 ) this.subName = "组织结构";
+            else if( path.indexOf('partner') != -1 ) this.subName = "校企合作";
+            else if( path.indexOf('contact') != -1 ) this.subName = "联系我们";
         }
-}
+    }
 </script>
 
 <style scoped lang="less">
