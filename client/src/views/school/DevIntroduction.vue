@@ -72,8 +72,6 @@
         height: 50px;          
         border-radius: 50%;
         padding-top:5px;
-        //-moz-border-radius: 50%;      
-        //-webkit-border-radius: 50%; 
 
 
     }

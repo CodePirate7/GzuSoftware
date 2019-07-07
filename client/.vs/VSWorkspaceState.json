@@ -3,8 +3,10 @@
     "",
     "\\src",
     "\\src\\views",
+    "\\src\\views\\school",
+    "\\src\\views\\students",
     "\\src\\views\\workers"
   ],
-  "SelectedNode": "\\src\\views\\workers\\NO.1.png",
+  "SelectedNode": "\\src\\views\\school\\DevIntroduction.vue",
   "PreviewInSolutionExplorer": false
 }
