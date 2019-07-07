@@ -68,7 +68,7 @@
                     </div>
                 </Col>
                 <Col span="6">
-                    <Affix :offset-top="10">
+                    <Affix :offset-top="50">
                         <Card shadow class="dev-issue-aside dshadow" v-if="!user">
                             <span style="font-size:14px">登录后即可评论和写文章</span>
                             <!-- <span style="font-size:14px">欢迎你，Aresn。</span> -->

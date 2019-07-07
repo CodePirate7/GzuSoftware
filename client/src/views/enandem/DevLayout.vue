@@ -2,58 +2,63 @@
     <div class="container">
         <!--        <div class="img"></div>-->
         <Layout>
-            <Sider class="sider" width="240">
-                <Menu class="sider-menu" active-name="/enrollment">
-                    <MenuItem name="/enrollment" to="enrollment">
-                        就业信息
-                    </MenuItem>
-                    <MenuItem name="/employment" to="employment">
-                        招生信息
-                    </MenuItem>
-                </Menu>
+            <Sider class="sider" width="240" style="background:#fff;">
+                <Affix :offset-top="50">
+                    <Menu class="sider-menu" :active-name="activeName">
+                        <MenuItem name="/enandem/enrollment" to="enrollment">
+                            就业信息
+                        </MenuItem>
+                        <MenuItem name="/enandem/employment" to="employment">
+                            招生信息
+                        </MenuItem>
+                    </Menu>
+                </Affix>
             </Sider>
             <Content class="content">
-                <slot></slot>
+                <Breadcrumb>
+                    <BreadcrumbItem to="/home">首页</BreadcrumbItem>
+                    <BreadcrumbItem to="/enandem">招生就业</BreadcrumbItem>
+                    <BreadcrumbItem >{{subName}}</BreadcrumbItem>
+                </Breadcrumb>
+                <Card style="margin-top:16px;">
+                    <slot></slot>
+                </Card>
             </Content>
         </Layout>
     </div>
 </template>
 
 <script>export default {
-        name: "DevLayout"
-    }</script>
+    data(){
+        return {
+            activeName: this.$route.path,
+            subName: '学院简介'
+        }
+    },
+    created(){
+        this.activeName =  this.$route.path;
+        let path =  this.$route.path;
+        if( path.indexOf('enrollment') != -1 ) this.subName = "就业信息";
+        if( path.indexOf('employment') != -1 ) this.subName = "招生信息";
+    }
+    }
+</script>
 
 <style scoped lang="less">
 
-
-    .container {
-        width: 90%;
+    .container{
         margin: 5px auto;
-        .img
-
-    {
-        background: linear-gradient(33deg, #99E5A2, #C1E3FF);
-        height: 150px;
+        width: 90%;
+        .sider{
+            position: absolute;
+            overflow: auto;
+        }
+        .content{
+            margin-left: 240px;
+            padding: 16px;
+        }
     }
-
-    .sider {
-        position: fixed;
-        height: 100%;
-        overflow: auto;
-        z-index: 1;
-        background: #f8f8f9;
-        .sider-menu
-
-    {
-        /*margin-top: 20px;*/
-        background: #f8f8f9;
-    }
-
-    }
-
-    .content {
-        margin-left: 240px;
-        padding: 16px;
-    }
+    .ivu-layout{
+        background: transparent;
     }
 </style>

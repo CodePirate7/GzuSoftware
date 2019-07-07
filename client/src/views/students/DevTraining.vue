@@ -1,11 +1,9 @@
 ﻿<template>
     <div>
         <dev-layout>
-            <h2 align="center" style="margin-bottom:15px">本科生培养方案</h2>
             <Collapse v-model="value2" accordion>
                 <Panel name="1" style="font-size:17px;">
                     一、关于毕业学分
-
                     <p slot="content" class="title">
                         1、总学分
                     </p>
@@ -14,7 +12,6 @@
                         （1）普通课程学分：160分
                         （2）第二课堂学分：6分
                     </p>
-
                     <p slot="content" class="title">
                         2、普通课程
                     </p>

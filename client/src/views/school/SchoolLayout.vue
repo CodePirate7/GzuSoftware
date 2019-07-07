@@ -2,8 +2,8 @@
     <div class="container">
         <!--        <div class="img"></div>-->
         <Layout>
-            <Sider class="sider" width="240">
-                <Affix :offset-top="45">
+            <Sider class="sider" width="240" style="background:#fff;">
+                <Affix :offset-top="50">
                     <Menu class="sider-menu" theme="light" :active-name="activeName" >
                         <MenuItem name="/school/introduction" to="introduction">
                             学院简介
