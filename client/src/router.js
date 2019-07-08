@@ -109,8 +109,12 @@ export default new Router({
             redirect: '/research/achievement',
             children: [
                 {
-                    path: 'achievement',
-                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevAchievement.vue')
+                    path: 'stu-achievement',
+                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevStuAchievement.vue')
+                },
+                {
+                    path: 'tea-achievement',
+                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevTeaAchievement.vue')
                 },
                 {
                     path: 'research',

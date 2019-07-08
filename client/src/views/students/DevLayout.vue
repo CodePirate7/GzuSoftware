@@ -9,7 +9,7 @@
                             本科生培养
                         </MenuItem>
                         <MenuItem name="/students/curriculum" to="curriculum">
-                            课程设置
+                            专业培养
                         </MenuItem>
                     </Menu>
                 </Affix>
@@ -40,7 +40,7 @@
             this.activeName =  this.$route.path;
             let path =  this.$route.path;
             if( path.indexOf('training') != -1 ) this.subName = "本科生培养";
-            if( path.indexOf('curriculum') != -1 ) this.subName = "课程设置";
+            if( path.indexOf('curriculum') != -1 ) this.subName = "专业培养";
         }
     }
 </script>

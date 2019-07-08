@@ -4,9 +4,12 @@
         <Layout>
             <Sider class="sider" width="240" style="background:#fff;">
                 <Affix :offset-top="50">
-                    <Menu  class="sider-menu" :active-name="activeName" theme="light">
-                        <MenuItem name="/research/achievement" to="achievement">
-                            科研成果
+                    <Menu class="sider-menu" :active-name="activeName" theme="light">
+                        <MenuItem name="/research/stuachievement" to="stu-achievement">
+                            学生项目成果
+                        </MenuItem>
+                        <MenuItem name="/research/tachievement" to="tea-achievement">
+                            老师项目成果
                         </MenuItem>
                         <MenuItem name="/research/research" to="research">
                             研究中心
@@ -42,7 +45,6 @@
         created(){
             this.activeName =  this.$route.path;
             let path =  this.$route.path;
-            if( path.indexOf('achievement') != -1 ) this.subName = "科研成果";
             if( path.indexOf('research') != -1 ) this.subName = "研究中心";
             if( path.indexOf('academic') != -1 ) this.subName = "学术活动";
         }

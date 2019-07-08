@@ -42,18 +42,19 @@
                       <Icon type="md-school" />学生培养
                     </template>
                     <MenuItem name="/training" to="/students/training">本科生培养</MenuItem>
-                    <MenuItem name="/curriculum" to="/students/curriculum">课程设置</MenuItem>
+                    <MenuItem name="/curriculum" to="/students/curriculum">专业培养</MenuItem>
                   </Submenu>
                 </MenuItem>
                 <MenuItem name="/research">
-                  <Submenu name="/research">
-                    <template slot="title">
-                      <Icon type="md-flask" />学术研究
-                    </template>
-                    <MenuItem name="/achievement" to="/research/achievement">科研成果</MenuItem>
-                    <MenuItem name="/research" to="/research/research">研究中心</MenuItem>
-                    <MenuItem name="/academic" to="/research/academic">学术活动</MenuItem>
-                  </Submenu>
+                    <Submenu name="/research">
+                        <template slot="title">
+                            <Icon type="md-flask" />学术研究
+                        </template>
+                        <MenuItem name="/stuachievement" to="/research/stu-achievement">学生项目成果</MenuItem>
+                        <MenuItem name="/teaachievement" to="/research/tea-achievement">老师项目成果</MenuItem>
+                        <MenuItem name="/research" to="/research/research">研究中心</MenuItem>
+                        <MenuItem name="/academic" to="/research/academic">学术活动</MenuItem>
+                    </Submenu>
                 </MenuItem>
                 <MenuItem name="/enandem">
                   <Submenu name="/enandem">

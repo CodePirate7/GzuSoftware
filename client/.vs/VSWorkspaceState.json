@@ -3,9 +3,8 @@
     "",
     "\\src",
     "\\src\\views",
-    "\\src\\views\\school",
-    "\\src\\views\\workers"
+    "\\src\\views\\research"
   ],
-  "SelectedNode": "\\src\\views\\school\\SchoolLayout.vue",
+  "SelectedNode": "\\src\\views\\research\\DevLayout.vue",
   "PreviewInSolutionExplorer": false
 }
