@@ -9,7 +9,11 @@
                     </p>
                     <p slot="content">
                         每个学生必须拿到要求的最低学分才能毕业
+                    </p>
+                    <p slot="content">
                         （1）普通课程学分：160分
+                    </p>
+                    <p slot="content">
                         （2）第二课堂学分：6分
                     </p>
                     <p slot="content" class="title">
@@ -581,10 +585,7 @@
         line-height: 30px;
         font-size: 14px;
     }
-
-    .top{
-
-        
+    .top{ 
         background: rgba(199, 199, 199, .7);
         color: #fff;
         text-align: center;

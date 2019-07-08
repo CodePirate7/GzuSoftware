@@ -1,172 +1,180 @@
 ﻿<template>
         <div class="content">
             <dev-layout>
-                    <Row :gutter="30">
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">许道云</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">贵州大学计算机科学与技术学院院长 / 教授 / 博士生导师 / 专家委员会主任</p>
-                                <p>邮箱:</p>
-                            </Card>
+                <div style="margin-top: 20px;" class="content">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
                         </div>
-                        </Col>
-
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">秦永斌</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">贵州大学计算机科学与技术学院副院长 / 博士 / 副教授 / 专家委员会副主任</p>
-                                <p>邮箱:</p>
-                            </Card>
+                        <div class="card-text">
+                            <p class="card-text-name">许道云</p>
+                            <p class="card-text-cnt">贵州大学计算机科学与技术学院院长</p>
+                            <p class="card-text-cnt">教授 / 博士生导师</p.card-text-cnt>
+                            <p class="card-text-cnt">专家委员会主任</p>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
                         </div>
-                        </Col>
-
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">陈滢</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">贵州大学计算机科学与技术学院院长 / 教授 / 博士生导师 / 专家委员会主任</p>
-                                <p>邮箱:</p>
-                            </Card>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
                         </div>
-                        </Col>
-                    </Row>
-                    
-                    <Row :gutter="30">
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">姜旭平</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">清华大学教授 / 互联网营销奠基人</p>
-                                <p>邮箱:</p>
-                            </Card>
+                        <div class="card-text">
+                            <p class="card-text-name">秦永斌</p>
+                            <p class="card-text-cnt">贵州大学计算机科学与技术学院副院长</p>
+                            <p class="card-text-cnt">副教授 / 专家委员会副主任</p.card-text-cnt>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
                         </div>
-                        </Col>
-
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">林仕鼎</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">原百度大数据首席架构师</p>
-                                <p>邮箱:</p>
-                            </Card>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
                         </div>
-                        </Col>
-
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">欧延亮</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">硕士 / 原Adobe中国研发中心架构师</p>
-                                <p>邮箱:</p>
-                            </Card>
+                        <div class="card-text">
+                            <p class="card-text-name">陈滢</p>
+                            <p class="card-text-cnt">慧科研究院院长 / 博士</p>
+                            <p class="card-text-cnt">原IBM中国研究院副院长</p.card-text-cnt>
+                            <p class="card-text-cnt">专家委员会副主任</p>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
                         </div>
-                        </Col>
-                    </Row>
-
-                    <Row :gutter="30">
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">方业昌</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">美国FIU博士 / 慧科集团创始人</p>
-                                <p>邮箱:</p>
-                            </Card>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
                         </div>
-                        </Col>
-
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">岳喜伟</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">清华大学MBA / 慧科集团CEO</p>
-                                <p>邮箱:</p>
-                            </Card>
+                        <div class="card-text">
+                            <p class="card-text-name">姜旭平</p>
+                            <p class="card-text-cnt">清华大学教授</p>
+                            <p class="card-text-cnt">互联网营销奠基人</p.card-text-cnt>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
                         </div>
-                        </Col>
-
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">王浩</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">清华大学博士 / 原IBM中国大学合作部总经理</p>
-                                <p>邮箱:</p>
-                            </Card>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
                         </div>
-                        </Col>
-                    </Row>
-
-                    <Row :gutter="30">
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">管刚</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">清华大学博士 / 原腾讯教育事业部总经理</p>
-                                <p>邮箱:</p>
-                            </Card>
+                        <div class="card-text">
+                            <p class="card-text-name">林仕鼎</p>
+                            <p class="card-text-cnt">原百度大数据首席架构师</p>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
                         </div>
-                        </Col>
-
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">李秦伟</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">贵州大学计算机科学与技术学院副院长 / 教授</p>
-                                <p>邮箱:</p>
-                            </Card>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
                         </div>
-                        </Col>
+                        <div class="card-text">
+                            <p class="card-text-name">欧延亮</p>
+                            <p class="card-text-cnt">硕士 / 原Adobe中国研发中心架构师</p>
 
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">龙慧云</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">贵州大学计算机科学与技术学院副院长 / 博士 / 副教授</p>
-                                <p>邮箱:</p>
-                            </Card>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
                         </div>
-                        </Col>
-                    </Row>    
-
-                    <Row :gutter="30">
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">李智</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">博士 / 副教授</p>
-                                <p>邮箱:</p>
-                            </Card>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
                         </div>
-                        </Col>
-
-                        <Col span="7">
-                        <div style="padding: 20px">
-                            <Card :bordered="false">
-                                <p slot="title" style="height:160px;" class="name">彭长根</p>
-                                <p slot="extra"><img src="./NO.1.png" alt="放图片" /></p>
-                                <p slot="extra" class="inf">博士 / 教授</p>
-                                <p>邮箱:</p>
-                            </Card>
+                        <div class="card-text">
+                            <p class="card-text-name">方业昌</p>
+                            <p class="card-text-cnt">慧科集团创始人</p>
+                            <p class="card-text-cnt">美国FIU博士</p.card-text-cnt>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
                         </div>
-                        </Col>
-
-                        
-                    </Row>
-
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
+                        </div>
+                        <div class="card-text">
+                            <p class="card-text-name">岳喜伟</p>
+                            <p class="card-text-cnt">慧科集团CEO师</p>
+                            <p class="card-text-cnt">清华大学MBA</p.card-text-cnt>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
+                        </div>
+                        <div class="card-text">
+                            <p class="card-text-name">王浩</p>
+                            <p class="card-text-cnt">清华大学博士</p>
+                            <p class="card-text-cnt">原IBM中国大学合作部总经理</p.card-text-cnt>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
+                        </div>
+                        <div class="card-text">
+                            <p class="card-text-name">管刚</p>
+                            <p class="card-text-cnt">清华大学博士</p>
+                            <p class="card-text-cnt">原腾讯教育事业部总经理</p.card-text-cnt>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
+                        </div>
+                        <div class="card-text">
+                            <p class="card-text-name">李秦伟</p>
+                            <p class="card-text-cnt">贵州大学计算机科学与技术学院副院长</p>
+                            <p class="card-text-cnt">教授</p.card-text-cnt>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
+                        </div>
+                        <div class="card-text">
+                            <p class="card-text-name">龙慧云</p>
+                            <p class="card-text-cnt">贵州大学计算机科学与技术学院副院长</p>
+                            <p class="card-text-cnt">博士 / 副教授</p.card-text-cnt>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
+                        </div>
+                        <div class="card-text">
+                            <p class="card-text-name">李智</p>
+                            <p class="card-text-cnt">博士 / 副教授</p.card-text-cnt>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                 alt="profile card">
+                        </div>
+                        <div class="card-text">
+                            <p class="card-text-name">彭长根</p>
+                            <p class="card-text-cnt">博士 / 教授</p.card-text-cnt>
+                            <p class="card-text-cnt"> <strong>juancheng2016@qq.com</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <BackTop :height="100" :bottom="35">
+                    <div class="top">
+                        <Icon type="ios-arrow-up" />
+                    </div>
+                </BackTop>
             </dev-layout>
         </div>
 </template>
@@ -183,31 +191,61 @@
 </script>
 
 <style scoped lang="less">
-
-
-    .name{
-        font-size:20px;
-        color:#2d8cf0;
-        padding-top:20px;
-        padding-left:30px;
-        width:150px;
-        margin-bottom:20px;
-    }
-    .inf{
-        
-        margin-top:5px;
-        margin-left:5px;
-        width:200px;
-    }
-    img{
-        margin-left:125px;
-        width:70px;
-        height:70px;
-        border-radius:70px;
-        border: 2px solid #2d8cf0;
-    }
     p {
         line-height: 30px;
         font-size: 16px;
+    }
+    .card{
+        width: 250px;
+        //height: auto;
+        height:230px;
+        border-radius: 12px;
+        position: relative;
+        background: #e1f0fe;
+        margin-bottom: 50px;
+    }
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card-img{
+        width: 65px;
+        height: 65px;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        position: relative;
+        z-index: 4;
+        box-shadow: 0px 5px 10px 0px #1E8BC3, 0px 0px 0px 3px rgba(107, 74, 255, 0.5);
+    }
+    .card-img img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .card-text{
+        text-align: center;
+        margin-top: -20px;
+    }
+    .card-text-name{
+        font-weight: 600;
+    }
+    .card-text-cnt{
+        font-size: 14px;
+    }
+    .top{       
+        background: rgba(199, 199, 199, .7);
+        color: #fff;
+        text-align: center;
+        border-radius: 50%;
+        width: 50px;      
+        height: 50px;          
+        border-radius: 50%;
+        padding-top:5px;
     }
 </style>

@@ -62,10 +62,7 @@
                 现实，释放每一位大学生的创新能量。
             </p>
             <br />
-            <img src="./NO.1.png" />
-            <br />
-            <br />
-            <br />
+            <img src="../../assets/NO.1.png" style="width:1075px;margin-bottom:30px;"/>
 
             <h2 align="center">实验室平台的搭建</h2>
             <br />
@@ -84,9 +81,7 @@
                 为学生的就业率与就业质量提供了保障。
             </p>
             <br />
-            <img src="./NO.2.png" style="padding-left:30px;" />
-            <br />
-            <br />
+            <img src="../../assets/NO.2.png" style="padding-left:30px;margin-bottom:30px" />
 
             <h3>阿里 · 大数据实验室:</h3>
             <p>
@@ -103,9 +98,7 @@
                 重要的积极意义。
             </p>
             <br />
-            <img src="./NO.3.png" style="padding-left:80px;" />
-            <br />
-            <br />
+            <img src="../../assets/NO.3.png" style="padding-left:80px;margin-bottom:30px" />
 
             <h3>百度互联网营销实验室:</h3>
             <p>
@@ -121,8 +114,7 @@
                 髓。
             </p>
             <br />
-            <img src="./NO.4.png" style="padding-left:280px;" />
-            <br />
+            <img src="../../assets/NO.4.png" style="padding-left:280px;margin-bottom:30px" />
 
             <BackTop :height="100" :bottom="35">
                 <div class="top">
@@ -144,15 +136,11 @@
     }
 </script>
 <style scoped lang="less">
-
     p {
         line-height: 30px;
         font-size: 16px;
     }
-
     .top{
-
-        
         background: rgba(199, 199, 199, .7);
         color: #fff;
         text-align: center;
@@ -161,9 +149,5 @@
         height: 50px;          
         border-radius: 50%;
         padding-top:5px;
-        //-moz-border-radius: 50%;      
-        //-webkit-border-radius: 50%; 
-
-
     }
 </style>>

@@ -3,7 +3,7 @@
         <school-layout>
             <h2 align="center">贵州大学省级示范性软件学院组织架构图</h2>
             <br />
-            <img src="./Str.png" />
+            <img src="../../assets/Str.png" />
             <BackTop :height="100" :bottom="35">
                 <div class="top">
                     <Icon type="ios-arrow-up" />
