@@ -6,10 +6,10 @@
                 <Affix :offset-top="50">
                     <Menu class="sider-menu" :active-name="activeName">
                         <MenuItem name="/enandem/enrollment" to="enrollment">
-                            就业信息
+                            <Icon type="md-pie" />就业信息
                         </MenuItem>
                         <MenuItem name="/enandem/employment" to="employment">
-                            招生信息
+                            <Icon type="md-person-add" />招生信息
                         </MenuItem>
                     </Menu>
                 </Affix>

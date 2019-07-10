@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\views",
+    "\\src\\views\\enandem",
     "\\src\\views\\research"
   ],
-  "SelectedNode": "\\src\\views\\research\\DevStuAchievement.vue",
+  "SelectedNode": "\\src\\views\\enandem\\DevLayout.vue",
   "PreviewInSolutionExplorer": false
 }
