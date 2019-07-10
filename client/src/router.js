@@ -63,8 +63,7 @@ export default new Router({
       ]
 
     },
-
-        {
+    {
         path: '/workers',
         name: 'workers',
         component: () => import(/* webpackChunkName: "about" */ './views/workers/DevWorkers.vue'),
@@ -83,8 +82,7 @@ export default new Router({
         ]
 
         },
-
-        {
+    {
             path: '/students',
             name: 'students',
             component: () => import(/* webpackChunkName: "about" */ './views/students/DevStudents.vue'),
@@ -101,12 +99,11 @@ export default new Router({
 
             ]
         },
-
-        {
+    {
             path: '/research',
             name: 'research',
             component: () => import(/* webpackChunkName: "about" */ './views/research/DevRes.vue'),
-            redirect: '/research/achievement',
+            redirect: '/research/stu-achievement',
             children: [
                 {
                     path: 'stu-achievement',
@@ -126,8 +123,7 @@ export default new Router({
                 }
             ]
         },
-
-        {
+    {
             path: '/enandem',
             name: 'enandem',
             component: () => import(/* webpackChunkName: "about" */ './views/enandem/DevEnandem.vue'),
@@ -143,7 +139,28 @@ export default new Router({
                 }
             ]
         },
-
+    {
+      name: 'information',
+      path:'/information',
+      component: () => import(/* webpackChunkName: "about" */ './views/information/Information.vue'),
+      redirect: '/information/news',
+      children:[
+          {
+              path:'news',
+              name:'news',
+              component: () => import(/* webpackChunkName: "about" */ './views/information/News.vue'),
+          },
+          {
+              path:'notice',
+              component:() => import(/* webpackChunkName: "about" */ './views/information/Notice.vue')
+          }
+      ]
+    },
+    {
+          path:'/information/news/:id',
+          name:'newsDetail',
+          component: () => import(/* webpackChunkName: "about" */ './views/information/NewsDetail.vue')
+    },
     {
       path:'*',
       component: () => import(/* webpackChunkName: "about" */ './views/404.vue')

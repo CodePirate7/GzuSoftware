@@ -10,10 +10,10 @@
                           <Icon type="ios-film-outline"></Icon>
                           学 院 新 闻
                       </p>
-                      <a href="#" slot="extra">
+                      <router-link to="/information" slot="extra">
                           <Icon type="ios-loop-strong"></Icon>
                           更多 >
-                      </a>
+                      </router-link>
                       <!--<Divider orientation="left" style="font-size:20px;font-weight:bolder;padding-top:20px;">学 院 新 闻</Divider>-->
                       <div>
                           <Row :gutter="24" style="margin-bottom: 20px;">

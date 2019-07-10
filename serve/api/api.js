@@ -1,5 +1,6 @@
 const userService = require('../service/users');
-const articleService = require('../service/articles')
+const articleService = require('../service/articles');
+const newsService = require('../service/news');
 const Router = require('koa-router');
 const router = Router();
 
@@ -38,6 +39,17 @@ router.post('/article/addviews', articleService.addViews);
 
 //增加评论
 router.post('/article/addcomment', articleService.addComment);
+
+//------------------文章表-------------------//
+
+//获取所有新闻
+router.get('/news', newsService.findAllNews);
+
+//通过ID查找新闻
+router.get('/news/:id', newsService.findNewsById);
+
+//增加新闻
+router.post('/news/add',newsService.add);
 
 
 module.exports = {
