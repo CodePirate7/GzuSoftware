@@ -6,16 +6,16 @@
                 <Affix :offset-top="50">
                     <Menu class="sider-menu" theme="light" :active-name="activeName" >
                         <MenuItem name="/school/introduction" to="introduction">
-                            学院简介
+                            <Icon type="ios-map" />学院简介
                         </MenuItem>
                         <MenuItem name="/school/structure" to="structure">
-                            组织结构
+                            <Icon type="md-git-network" />组织结构
                         </MenuItem>
                         <MenuItem name="/school/partner" to="partner">
-                            校企合作
+                            <Icon type="ios-hand" />校企合作
                         </MenuItem>
                         <MenuItem name="/school/contact" to="contact">
-                            联系我们
+                            <Icon type="ios-call" />联系我们
                         </MenuItem>
                     </Menu>
                 </Affix>

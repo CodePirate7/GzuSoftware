@@ -6,16 +6,16 @@
                 <Affix :offset-top="50">
                     <Menu class="sider-menu" :active-name="activeName" theme="light">
                         <MenuItem name="/research/stuachievement" to="stu-achievement">
-                            学生项目成果
+                            <Icon type="ios-list-box" />学生项目成果
                         </MenuItem>
                         <MenuItem name="/research/tachievement" to="tea-achievement">
-                            老师项目成果
+                            <Icon type="ios-list-box" />老师项目成果
                         </MenuItem>
                         <MenuItem name="/research/research" to="research">
-                            研究中心
+                            <Icon type="md-planet" />研究中心
                         </MenuItem>
                         <MenuItem name="/research/academic" to="academic">
-                            学术活动
+                            <Icon type="md-walk" />学术活动
                         </MenuItem>
                     </Menu>
                 </Affix>

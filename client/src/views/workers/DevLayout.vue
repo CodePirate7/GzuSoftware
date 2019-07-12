@@ -6,11 +6,11 @@
                <Affix :offset-top="50">
                    <Menu class="sider-menu" theme="light" :active-name="activeName" >
                        <MenuItem name="/workers/teaching"  to="teaching" >
-                           <Icon type="ios-search"></Icon>
+                           <Icon type="md-ionic" />
                            <span>教学研究人员</span>
                        </MenuItem>
                        <MenuItem name="/workers/administrative" to="administrative" >
-                           <Icon type="ios-search"></Icon>
+                           <Icon type="md-ionic" />
                            <span>行政人员</span>
                        </MenuItem>
                    </Menu>

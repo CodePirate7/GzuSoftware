@@ -6,10 +6,10 @@
                 <Affix :offset-top="50">
                     <Menu  class="sider-menu" :active-name="activeName" theme="light">
                         <MenuItem name="/students/training" to="training">
-                            本科生培养
+                            <Icon type="ios-book" />本科生培养
                         </MenuItem>
                         <MenuItem name="/students/curriculum" to="curriculum">
-                            专业培养
+                            <Icon type="md-laptop" />专业培养
                         </MenuItem>
                     </Menu>
                 </Affix>
