@@ -283,7 +283,7 @@
         transform: translateY(-50%);
         border-radius: 50%;
         position: relative;
-        z-index: 4;
+        z-index: 1;
         box-shadow: 0px 5px 10px 0px #1E8BC3, 0px 0px 0px 3px rgba(107, 74, 255, 0.5);
     }
     .card-img img{

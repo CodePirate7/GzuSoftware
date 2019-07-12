@@ -9,7 +9,7 @@
         <div class="dev-header">
         <Row>
           <Col span="20" offset="2">
-            <Menu mode="horizontal" :active-name="activename">
+            <Menu mode="horizontal" :active-name="activename" class="menu-flex">
               <MenuItem name="/home" to="/home">
                 <Icon type="md-home" />首页
               </MenuItem>
@@ -97,7 +97,7 @@ export default {
 
 <style scoped lang="less">
   .ivu-menu{
-    position: static;
+    position: static!important;
   }
 .ivu-menu-light {
   /*background: transparent;*/
@@ -138,6 +138,10 @@ export default {
 }
 .ivu-menu-submenu{
   padding: 0;
+}
+.menu-flex{
+  display: flex;
+  justify-content: space-between;
 }
 
 </style>

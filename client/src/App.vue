@@ -14,7 +14,11 @@ export default {
 </script>
 
 <style lang="less">
-
+  html,body,#app{
+    height:100%;
+    margin:0;
+    padding:0;
+  }
   .dshadow {
     position: relative;
     box-shadow: 0px 1px 4px rgba(0,0,0,0.3),

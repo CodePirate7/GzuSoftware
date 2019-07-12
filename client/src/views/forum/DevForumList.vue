@@ -61,7 +61,7 @@
                         </Card>
                     </div>
                     <div style="text-align: center;">
-                        <Page :total="total" show-sizer
+                        <Page :total="total" show-sizer show-total
                               @on-change="handleChange"
                               @on-page-size-change="handleSizeChange"
                         />

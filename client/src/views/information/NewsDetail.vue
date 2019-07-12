@@ -119,4 +119,18 @@
     .content/deep/.none{
         display: none;
     }
+    .content/deep/table{
+        text-align: center;
+        margin: 0 auto;
+        border:solid;
+        border-width:1px 0 0 1px;
+    }
+    .content/deep/table p{
+        text-indent: 0!important;
+    }
+    .content/deep/table td{
+        border:solid;
+        border-width:0 1px 1px 0;
+        padding:0 5px;
+    }
 </style>

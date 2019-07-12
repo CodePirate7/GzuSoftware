@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <Layout>
+        <Layout >
             <Sider class="sider" width="240" style="background:#fff;">
                 <Affix :offset-top="50">
                     <Menu class="sider-menu" :active-name="activeName">

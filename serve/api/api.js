@@ -45,11 +45,13 @@ router.post('/article/addcomment', articleService.addComment);
 //获取所有新闻
 router.get('/news', newsService.findAllNews);
 
+//增加新闻
+router.post('/news/add',newsService.add);
+
 //通过ID查找新闻
 router.get('/news/:id', newsService.findNewsById);
 
-//增加新闻
-router.post('/news/add',newsService.add);
+
 
 
 module.exports = {

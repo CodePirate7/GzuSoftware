@@ -13,12 +13,13 @@ module.exports = {
     let result = {
       success: false,
       data: null,
-      message: ""
-    }
-    let existOne = await Users.findOne( {username: user.username} )
+      message: "",
+      isAdmin: ''
+    };
+    let existOne = await Users.findOne( {username: user.username} );
     if( existOne ){
-      result.message = "用户已存在,请重新注册"
-      ctx.body = result
+      result.message = "用户已存在,请重新注册";
+      ctx.body = result;
       return 
     }
     let userresult = await new Users( user ).save();
@@ -37,12 +38,12 @@ module.exports = {
       token:null
     };
     let userResult = await Users.findOne({username: user.username});
-    console.log( userResult )
     if( userResult ){
-      if ( user.username === userResult.username ) {
+      if ( user.username === userResult.username && user.password ===userResult.password ) {
         result.success = true;
         result.message = "登录成功";
         result.data = userResult;
+        result.isAdmin = userResult.isAdmin;
         // result.token = jwt.sign({
         //   id: userResult._id,
         //   username: userResult.username
@@ -80,7 +81,6 @@ module.exports = {
   //删除指定用户
   deleteOneByName: async ( ctx ) => {
     let { name } = ctx.params;
-    console.log( name )
     let result = {
       success: false,
       data: null,

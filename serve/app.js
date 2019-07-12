@@ -12,7 +12,13 @@ const app = new Koa();
 
 app.use(logger());
 app.use(cors());
-app.use(bodyParser());
+app.use(bodyParser({
+    formLimit:"3mb",
+    jsonLimit:"15mb",
+    textLimit:"3mb",
+    enableTypes: ['json', 'form', 'text']
+}));
+// app.use(bodyParser());
 
 //验证token
 // app.use((ctx, next) => {

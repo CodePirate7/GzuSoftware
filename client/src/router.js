@@ -77,10 +77,7 @@ export default new Router({
                 path: 'administrative',
                 component: () => import(/* webpackChunkName: "about" */ './views/workers/DevAdministrative.vue')
             }
-
-
         ]
-
         },
     {
             path: '/students',
@@ -161,6 +158,30 @@ export default new Router({
           name:'newsDetail',
           component: () => import(/* webpackChunkName: "about" */ './views/information/NewsDetail.vue')
     },
+      {
+        path:'/admin',
+        name:'admin',
+        component: () => import(/* webpackChunkName: "about" */ './views/admin/AdminLyout.vue'),
+        redirect:'/admin/login',
+        children:[
+            {
+                path:'login',
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/Login.vue')
+            },
+            {
+                path:'home',
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/Layout.vue')
+            },
+            {
+                path:'news',
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/News.vue')
+            },
+            {
+                path:'addnews',
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/AddNews.vue')
+            }
+        ]
+      },
     {
       path:'*',
       component: () => import(/* webpackChunkName: "about" */ './views/404.vue')
