@@ -5,6 +5,7 @@ const newsSchema = new mongoose.Schema({
     title: String, //新闻标题
     html: String, //新闻内容
     summary: String, //新闻摘要
+    cover: String,
     createAt:{     //发表时间
         type:Date,
         default:new Date,

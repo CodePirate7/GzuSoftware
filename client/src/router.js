@@ -179,6 +179,14 @@ export default new Router({
             {
                 path:'addnews',
                 component:() => import(/* webpackChunkName: "about" */ './views/admin/AddNews.vue')
+            },
+            {
+                path:'users',
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/Users.vue')
+            },
+            {
+                path:'articles',
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/Articles.vue')
             }
         ]
       },

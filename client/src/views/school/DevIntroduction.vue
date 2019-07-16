@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="content">
         <school-layout>
             <h2 align="center">贵州大学省级示范性软件学院简介</h2>
             <br />
@@ -74,5 +74,8 @@
         padding-top:5px;
 
 
+    }
+    .content{
+        font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB,"Microsoft JhengHei", "MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
     }
 </style>

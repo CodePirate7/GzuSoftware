@@ -3,6 +3,7 @@ const logger = require('koa-logger'); //打印请求信息
 const cors = require('koa2-cors'); //设置跨域
 const bodyParser = require('koa-bodyparser'); //处理post参数格式
 const mongoose = require('mongoose'); //mongoose
+const static = require('koa-static');
 // const koajwt = require('koa-jwt');
 
 const { name, port,db:{host,database}} = require('./config');
@@ -10,13 +11,13 @@ const { router } = require('./api/api');
 
 const app = new Koa();
 
+app.use(static(__dirname + '/public/image'));
 app.use(logger());
 app.use(cors());
 app.use(bodyParser({
-    formLimit:"3mb",
-    jsonLimit:"15mb",
-    textLimit:"3mb",
-    enableTypes: ['json', 'form', 'text']
+    formLimit:"1mb",
+    jsonLimit:"20mb",
+    textLimit:"1mb"
 }));
 // app.use(bodyParser());
 

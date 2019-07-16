@@ -13,7 +13,10 @@
                 </Upload>
                 <div v-if="isShow">
                     <span>文件名: </span>{{file.name}}
-                    <span>大小: </span>{{file.size}}
+                    <span>大小: </span>{{(file.size / 1024 / 1024).toFixed(2)}} MB
+                    <span> {{loaded}}</span>
+                    <Progress :percent="loaded" :stroke-width="5">
+                    </Progress>
                 </div>
             </FormItem>
             <FormItem>
@@ -39,33 +42,42 @@
                 file:'',
                 title:'',
                 summary:'',
-                isShow: false
+                isShow: false,
+                loaded:0,
+                result:''
             }
         },
         methods: {
             handleUpload( file ){
                 this.file = file;
+                let reader = new FileReader();
+                let size = file.size;
+                reader.readAsBinaryString(file);
+                reader.onprogress = evt => {
+                    this.loaded = evt.loaded / size * 100
+                };
+                reader.onload = f => {
+                    this.result = f.target.result;
+                };
                 this.isShow  = true;
                 return false;
             },
             handleSubmit(){
-                let reader = new FileReader();
-                reader.readAsBinaryString(this.file);
-                reader.onload = f => {
-                    let files = f.target.result;
-                    this.$axios.post('/news/add',{
-                        title: this.title,
-                        summary: this.summary,
-                        file: files
-                    }).then((res)=>{
-                        console.log(res);
-                        this.$Message.success(res.data.message);
-                        this.isShow = false;
-                        this.title = '';
-                        this.summary = '';
-                        this.file = '';
-                    })
-                }
+                this.loaded = 0;
+                this.$axios.post('/news/add',{
+                    title: this.title,
+                    summary: this.summary,
+                    file: this.result
+                }).then((res)=>{
+                    this.loaded = 100;
+                    this.$Message.success(res.data.message);
+                    this.isShow = false;
+                    this.title = '';
+                    this.summary = '';
+                    this.result = '';
+                    this.file = ''
+                })
+
             }
         }
     }

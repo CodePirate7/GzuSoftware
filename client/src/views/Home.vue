@@ -2,68 +2,41 @@
   <div class="home">
     <dev-header></dev-header>
     <Swiper></Swiper>
-    <div style="width: 90%;margin:10px auto;">
-          <Row :gutter="16" >
-              <Col span="16">
-                  <Card shadow style="border-radius: 10px;" class="dshadow">
-                      <p slot="title" style="font-size:20px;font-weight:bolder;">
-                          <Icon type="ios-film-outline"></Icon>
-                          学 院 新 闻
-                      </p>
-                      <router-link to="/information" slot="extra">
-                          <Icon type="ios-loop-strong"></Icon>
-                          更多 >
-                      </router-link>
-                      <!--<Divider orientation="left" style="font-size:20px;font-weight:bolder;padding-top:20px;">学 院 新 闻</Divider>-->
-                      <div>
-                          <Row :gutter="24" style="margin-bottom: 20px;">
-                              <Col span="4">
-                                <div style="background: linear-gradient(33deg, #99E5A2, #C1E3FF);height: 80px;"></div>
-                              </Col>
-                              <Col span="20" class="article-container">
-                                  <h3>2017企业项目课程答辩新闻稿</h3>
-                                  <p>贵州大学软件学院15级互联网营销专业实战项目答辩会</p>
-                              </Col>
-                          </Row>
-                          <Row :gutter="24">
-                              <Col span="4">
-                                  <div style="background: linear-gradient(33deg, #99E5A2, #C1E3FF);height: 80px;"></div>
-                              </Col>
-                              <Col span="20" class="article-container">
-                                  <h3>贵州大学17级新生活动新闻稿</h3>
-                                  <p>丹桂飘香，荷花满塘，又是一年迎新时贵州大学示范性软件学院迎来了第四届慧小科们。9月12日上午7时，学校迎新工作正式启动。一张张热情的笑脸，一句句亲切的问候，一项项贴心的服务，欢迎着来自全省各地的莘莘学子。校迎新工作正式启动。校迎新工作正式启动。校迎新工作正式启动。校迎新工作正式启动。校迎新工作正式启动。校迎新工作正式启动。校迎新工作正式启动。</p>
-                              </Col>
-                          </Row>
-                      </div>
-                  </Card>
-              </Col>
-              <Col span="8">
-                  <Card shadow style="border-radius: 10px;" class="dshadow">
-                      <p slot="title" style="font-size:20px;font-weight:bolder;">
-                          <Icon type="ios-film-outline"></Icon>
-                          通 知 公 告
-                      </p>
-                      <a href="#" slot="extra">
-                          <Icon type="ios-loop-strong"></Icon>
-                          更多 >
-                      </a>
-                      <div>
-                          <p>通知公告通知公告通知公告通知公告通知公告通知公告通知公告</p>
-                          <Divider />
-                      </div>
-                      <div>
-                          <p>通知公告通知公告通知公告通知公告通知公告通知公告通知公告</p>
-                          <Divider />
-                      </div>
+    <Card class="container">
+        <p slot="title" style="font-size:20px;font-weight:bolder;color: #1469C1;">
+            学 院 新 闻
+        </p>
+        <router-link slot="extra" style="color: #1469C1;" to="/information/news">
+            更 多
+        </router-link>
+        <div style="display: flex;justify-content: space-around;">
+            <router-link  class="news"  tag="div"
+                          v-for="( item, index ) in news"
+                          :to="`information/news/${item._id}`"
+                          :key="index"
+            >
+                <div class="img">
+                    <img :src="item.cover">
+                </div>
+                <div style="padding-top: 5px;">
+                    <h3>{{item.title}}</h3>
+                    <h4 class="article-container">{{item.summary}}</h4>
+                </div>
 
-                  </Card>
-              </Col>
-          </Row>
-      </div>
-    <div class="container" style="border-radius: 10px;">
-      <Divider orientation="left" style="font-size:20px;font-weight:bolder;padding-top:20px;">作 品 展 示</Divider>
-      <css-card ></css-card>
-    </div>
+            </router-link>
+        </div>
+    </Card>
+    <Card class="container">
+        <p slot="title" style="font-size:20px;font-weight:bolder;color: #1469C1;">
+            作 品 展 示
+        </p>
+        <router-link slot="extra" style="color: #1469C1;" to="/information/news">
+            更 多
+        </router-link>
+        <div>
+            <css-card ></css-card>
+        </div>
+    </Card>
     <div class="footer container">
       这里放footer
     </div>
@@ -75,9 +48,16 @@ import CssCard from '@/components/CssCard.vue'
 import Swiper from '@/components/Swiper.vue'
 export default {
   name: 'home',
+  mounted(){
+    this.$axios.get('/news')
+        .then( res => {
+            this.news = res.data.slice(0,4);
+        })
+  },
   data () {
         return {
-            value2: 0
+            value2: 0,
+            news:''
         }
   },
   components: {
@@ -86,6 +66,34 @@ export default {
 }
 </script>
 <style scoped lang="less">
+    .title{
+        width: 90%;
+        margin: 0 auto;
+        color: #1469C1;
+        font-size: 16px;
+        font-weight: 500;
+    }
+  .news{
+      h3{
+          line-height: 30px;
+          font-weight: 300;
+          color: #1469C1;
+          font-size: 13px;
+      }
+      h4{
+          font-weight: 300;
+      }
+      width: 22%;
+      background: #fff;
+      cursor: pointer;
+      /*box-shadow:  0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);*/
+      img{
+          width: 100%;
+      }
+      .img{
+          height: 180px;
+      }
+  }
 
   .container{
     width: 90%;

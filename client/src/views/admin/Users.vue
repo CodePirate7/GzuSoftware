@@ -5,6 +5,7 @@
                 <Time :time="row.createAt" type="date"></Time>
             </template>
             <template slot-scope="{ row, index }" slot="action">
+                <Button type="primary" size="small" style="margin-right: 5px" @click="show(index)">更改权限</Button>
                 <Button type="error" size="small" @click="remove(index)">删除</Button>
             </template>
         </Table>
@@ -23,7 +24,6 @@
 <script>
     import Layout from './Layout'
     export default {
-        name: "news",
         data () {
             return {
                 columns: [
@@ -33,19 +33,18 @@
                         align: 'center',
                     },
                     {
-                        title: '新闻标题',
-                        key: 'title',
+                        title: '用户名',
+                        key: 'username',
                         align: 'center',
                     },
                     {
-                        title: '发布时间',
+                        title: '注册时间',
                         slot:'time',
                         align:'center',
-
                     },
                     {
-                        title: '浏览量',
-                        key: 'views',
+                        title: '管理员',
+                        key: 'isAdmin',
                         align: 'center',
                     },
                     {
@@ -67,21 +66,10 @@
             getData () {
                 if ( this.loading ) return;
                 this.loading = true;
-                this.$axios.get('/news').then( res => {
+                this.$axios.get('/user').then( res => {
                     this.data = res.data;
                     this.loading = false;
                 })
-                // $.ajax({
-                //     method: 'get',
-                //     url: `/data/list/${this.current}/${this.size}`
-                // }).then(res => {
-                //     setTimeout(() => {
-                //         this.data = res.data.data.list;
-                //         this.total = res.data.data.total;
-                //         this.loading = false;
-                //     }, 1000);
-                // })
-
             },
             handleChangeSize (val) {
                 this.size = val;

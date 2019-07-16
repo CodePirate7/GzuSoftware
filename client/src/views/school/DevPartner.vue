@@ -1,5 +1,5 @@
 ﻿<template>
-    <div>
+    <div class="partner">
         <school-layout>
             <h2 align="center">慧科集团</h2>
             <br />
@@ -149,5 +149,8 @@
         height: 50px;          
         border-radius: 50%;
         padding-top:5px;
+    }
+    .partner{
+        font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB,"Microsoft JhengHei", "MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
     }
 </style>>

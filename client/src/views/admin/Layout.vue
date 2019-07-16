@@ -3,7 +3,7 @@
         <Layout :style="{minHeight: '100vh'}">
             <Sider collapsible :collapsed-width="78" v-model="isCollapsed">
                 <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
-                    <MenuItem name="1-1" >
+                    <MenuItem name="1-1" to="users">
                         <Icon type="ios-navigate"></Icon>
                         <span>用户总览</span>
                     </MenuItem>
@@ -11,13 +11,29 @@
                         <Icon type="ios-navigate"></Icon>
                         <span>新闻总览</span>
                     </MenuItem>
+                    <MenuItem name="1-3" to="articles">
+                        <Icon type="ios-navigate"></Icon>
+                        <span>文章总览</span>
+                    </MenuItem>
                     <MenuItem name="1-4" to="addnews">
                         <Icon type="ios-navigate"></Icon>
                         <span>发布新闻</span>
                     </MenuItem>
-                    <MenuItem name="1-3">
+                    <MenuItem name="1-5">
                         <Icon type="ios-navigate"></Icon>
-                        <span>通知公告</span>
+                        <span>文章管理</span>
+                    </MenuItem>
+                    <MenuItem name="1-6">
+                        <Icon type="ios-navigate"></Icon>
+                        <span>文章评论</span>
+                    </MenuItem>
+                    <MenuItem name="1-7">
+                        <Icon type="ios-navigate"></Icon>
+                        <span>提问管理</span>
+                    </MenuItem>
+                    <MenuItem name="1-8">
+                        <Icon type="ios-navigate"></Icon>
+                        <span>提问评论</span>
                     </MenuItem>
                 </Menu>
             </Sider>
