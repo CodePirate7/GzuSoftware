@@ -2,39 +2,28 @@
     <div class="layout">
         <Layout :style="{minHeight: '100vh'}">
             <Sider collapsible :collapsed-width="78" v-model="isCollapsed">
-                <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
-                    <MenuItem name="1-1" to="users">
+                <Menu :active-name="activeName" theme="dark" width="auto" :class="menuitemClasses">
+                    <MenuItem name="/admin/users" to="users">
                         <Icon type="ios-navigate"></Icon>
                         <span>用户总览</span>
                     </MenuItem>
-                    <MenuItem name="1-2" to="news">
+                    <MenuItem name="/admin/news" to="news">
                         <Icon type="ios-navigate"></Icon>
                         <span>新闻总览</span>
                     </MenuItem>
-                    <MenuItem name="1-3" to="articles">
+                    <MenuItem name="/admin/articles" to="articles">
                         <Icon type="ios-navigate"></Icon>
                         <span>文章总览</span>
                     </MenuItem>
-                    <MenuItem name="1-4" to="addnews">
+                    <MenuItem name="/admin/addnews" to="addnews">
                         <Icon type="ios-navigate"></Icon>
                         <span>发布新闻</span>
                     </MenuItem>
-                    <MenuItem name="1-5">
+                    <MenuItem name="/admin/comment" to="comment">
                         <Icon type="ios-navigate"></Icon>
-                        <span>文章管理</span>
+                        <span>评论管理</span>
                     </MenuItem>
-                    <MenuItem name="1-6">
-                        <Icon type="ios-navigate"></Icon>
-                        <span>文章评论</span>
-                    </MenuItem>
-                    <MenuItem name="1-7">
-                        <Icon type="ios-navigate"></Icon>
-                        <span>提问管理</span>
-                    </MenuItem>
-                    <MenuItem name="1-8">
-                        <Icon type="ios-navigate"></Icon>
-                        <span>提问评论</span>
-                    </MenuItem>
+
                 </Menu>
             </Sider>
             <Layout>
@@ -46,8 +35,7 @@
                 <Content :style="{padding: '0 16px 16px'}">
                     <Breadcrumb :style="{margin: '16px 0'}">
                         <BreadcrumbItem>首页</BreadcrumbItem>
-                        <BreadcrumbItem>用户管理</BreadcrumbItem>
-                        <BreadcrumbItem>Layout</BreadcrumbItem>
+                        <BreadcrumbItem>{{nav}}</BreadcrumbItem>
                     </Breadcrumb>
                     <Card>
                         <slot></slot>
@@ -61,13 +49,26 @@
 <script>
     import $ from '../../libs/util'
     export default {
+        created(){
+            let path = this.$route.path;
+            this.activeName = path;
+            let name = path.substring(7);
+            if( name == 'users' ) this.nav = '用户总览';
+            else if( name == 'news' ) this.nav = '新闻总览';
+            else if( name == 'articles' ) this.nav = '文章总览';
+            else if( name == "addnews" ) this.nav = "发布新闻";
+            else if( name == 'comment' ) this.nav = "评论管理";
+            // this.nav = this.$route.path.ind
+        },
         mounted(){
             this.admin = $.getStorage('admin', 2*60*60*1000).data;
         },
         data () {
             return {
                 isCollapsed: false,
-                admin:''
+                admin:'',
+                activeName: this.$route.path,
+                nav:''
             };
         },
         computed: {
