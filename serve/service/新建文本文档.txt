@@ -1,0 +1,49 @@
+
+
+input v-model="username"
+<button @click="handlesubmit"></div>
+	li v-for="(item,index) in userlist" :key="index"
+		{{item.username}}
+
+script
+	data(){
+		return {
+			username:'',
+			password:'',
+			userlist:''
+		}
+	}
+	methods:{
+		handlesubmit(){
+			let user = {
+				username: this.username,
+				password:this.password
+			}
+			this.$axios.get('/user').then( ( res )=>{
+					console.log(res)
+					this.userlist = res.data.data;
+					
+					let skdfj = sdf;
+					this.$Message.success(res.data.message)
+				} )
+			this.$axios.post('/login',{
+				user
+			}).then( (res)=>{
+				
+			} )
+		}
+	}
+
+
+
+
+data:{
+	[
+		{
+			username:"'sdfasdf",
+			password:'"sdfasdf",
+			createAt:"FDSAFADSF".
+			isAdmin:false,
+		 }		
+	]
+}
