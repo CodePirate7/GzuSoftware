@@ -12,6 +12,7 @@
     "iview": "^3.0.1",
     "mavon-editor": "^2.7.5",
     "simplemde": "^1.11.2",
+    "v-org-tree": "^1.0.12",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"

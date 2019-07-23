@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 import './plugins/iview.js'
+import OrgTree from 'v-org-tree'
+import 'v-org-tree/dist/v-org-tree.css'
+
+Vue.use(OrgTree)
 
 
 

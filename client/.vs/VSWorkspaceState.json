@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\components",
     "\\src\\views",
-    "\\src\\views\\enandem",
-    "\\src\\views\\research"
+    "\\src\\views\\school"
   ],
-  "SelectedNode": "\\src\\views\\enandem\\DevLayout.vue",
+  "SelectedNode": "\\src\\views\\school\\DevStructure.vue",
   "PreviewInSolutionExplorer": false
 }
