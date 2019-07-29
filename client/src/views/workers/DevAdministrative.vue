@@ -4,7 +4,7 @@
                 <div style="margin-top: 20px;" class="content">
                     <div class="card">
                         <div class="card-img">
-                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                            <img src="../../assets/许道云.png"
                                  alt="profile card">
                         </div>
                         <div class="card-text">
@@ -17,7 +17,7 @@
                     </div>
                     <div class="card">
                         <div class="card-img">
-                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                            <img src="../../assets/秦永斌.png"
                                  alt="profile card">
                         </div>
                         <div class="card-text">
@@ -125,7 +125,7 @@
                     </div>
                     <div class="card">
                         <div class="card-img">
-                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                            <img src="../../assets/李秦伟.png"
                                  alt="profile card">
                         </div>
                         <div class="card-text">
@@ -137,7 +137,7 @@
                     </div>
                     <div class="card">
                         <div class="card-img">
-                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                            <img src="../../assets/龙慧云.png"
                                  alt="profile card">
                         </div>
                         <div class="card-text">

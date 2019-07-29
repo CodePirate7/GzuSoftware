@@ -4,8 +4,10 @@
     "\\src",
     "\\src\\components",
     "\\src\\views",
-    "\\src\\views\\school"
+    "\\src\\views\\research",
+    "\\src\\views\\students",
+    "\\src\\views\\workers"
   ],
-  "SelectedNode": "\\src\\views\\school\\DevStructure.vue",
+  "SelectedNode": "\\src\\components\\Swiper.vue",
   "PreviewInSolutionExplorer": false
 }

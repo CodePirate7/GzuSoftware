@@ -52,7 +52,7 @@
                 </div>
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                        <img src="../../assets/王勇.png"
                              alt="profile card">
                     </div>
                     <div class="card-text">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                        <img src="../../assets/范琨.png"
                              alt="profile card">
                     </div>
                     <div class="card-text">

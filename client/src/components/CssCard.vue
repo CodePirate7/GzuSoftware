@@ -2,36 +2,41 @@
   <div class="content">
     <a class="card" href="#!">
       <div class="front" style="background: linear-gradient(33deg, #6CACFF, #8DEBFF)">
-        <p>Lorem ipsum dolor sit amet consectetur adipisi.</p>
+          <p>贵农网</p>
       </div>
       <div class="back">
         <div>
-          <p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-          <p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p>
+            <p>
+                情通天下，方能货通天下。贵农网是打造农
+                民自己的电商平台，把服务作为最高的追求，把
+                价值作为立业之基
+            </p>
           <button class="button">了解详情</button>
         </div>
       </div>
     </a>
     <a class="card" href="#!">
       <div class="front" style="background: linear-gradient(33deg, #99E5A2, #C1E3FF)">
-        <p>Lorem ipsum dolor sit amet consectetur adipisi.</p>
+          <p>建堪集团</p>
       </div>
       <div class="back">
         <div>
-          <p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-          <p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p>
+            <p>
+                制做出一个适合外国人的购买方式的网站以及后期的APP。
+                在推广产品的同时宣传企业品牌，让世界人增加对中国的
+                了解
+            </p>
           <button class="button">了解详情</button>
         </div>
       </div>
     </a>
     <a class="card" href="#!">
       <div class="front" style="background: linear-gradient(33deg, #6DE195, #C4E759)">
-        <p>Lorem ipsum dolor sit amet consectetur adipisi.</p>
+          <p>新浪贵州</p>
       </div>
       <div class="back">
         <div>
-          <p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-          <p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p>
+            <p>藐视寒冬，启动全民冬跑热情，让冬跑的足迹遍布城市角落，跑热中国，冬季不冬眠</p>
           <button class="button">了解详情</button>
         </div>
       </div>
