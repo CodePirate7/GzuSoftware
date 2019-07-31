@@ -4,7 +4,7 @@
             <div style="margin-top: 20px;" class="content">
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                        <img src="../../assets/余文千.png"
                              alt="profile card">
                     </div>
                     <div class="card-text">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                        <img src="../../assets/李祺.png"
                              alt="profile card">
                     </div>
                     <div class="card-text">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                        <img src="../../assets/孙逊.png"
                              alt="profile card">
                     </div>
                     <div class="card-text">
@@ -111,7 +111,7 @@
                 </div>
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                        <img src="../../assets/王鹏.jpg"
                              alt="profile card">
                     </div>
                     <div class="card-text">
@@ -167,7 +167,7 @@
                 </div>
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                        <img src="../../assets/张峻.jpg"
                              alt="profile card">
                     </div>
                     <div class="card-text">
@@ -180,7 +180,7 @@
                 </div>
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                        <img src="../../assets/叶凤哲.jpg"
                              alt="profile card">
                     </div>
                     <div class="card-text">

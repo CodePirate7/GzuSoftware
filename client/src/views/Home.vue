@@ -38,8 +38,33 @@
         </div>
     </Card>
     <div class="footer container">
-      这里放footer
-    </div>
+        
+        <div>
+            <row :gutter="50">
+                <Col span="8">
+                <Card>
+                    <p slot="title" style="color: #1469C1;">官方微信</p>
+                    <img src="#" alt="放图片" />
+                </Card>
+                </Col>
+                <Col span="8">
+                <Card>
+                    <p slot="title" style="color: #1469C1;">官方钉钉</p>
+                    <img src="#" alt="放图片" />
+                </Card>
+                </Col>
+                <Col span="8">
+                <Card>
+                    <p slot="title" style="color: #1469C1;">联系电话</p>
+                    <p>1234567891</p>
+                </Card>
+                </Col>
+            </row>
+            <Card style="margin-top:20px;">
+                <p>放备案信息</p>
+            </Card>
+        </div>
+</div>
   </div>
 </template>
 
@@ -120,7 +145,8 @@ export default {
     background: linear-gradient(33deg, #99E5A2, #C1E3FF)
   }
   .footer{
-    margin-top: 300px;
+    //margin-top: 300px;
+    padding:20px 30px 20px 30px;
   }
   .dev-news-item{
 
