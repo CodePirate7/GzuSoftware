@@ -52,7 +52,7 @@
                         </template>
                         <MenuItem name="/stuachievement" to="/research/stu-achievement">学生项目成果</MenuItem>
                         <MenuItem name="/teaachievement" to="/research/tea-achievement">老师项目成果</MenuItem>
-                        <!--<MenuItem name="/research" to="/research/research">研究中心</MenuItem>-->
+                        <MenuItem name="/research" to="/research/research">研究中心</MenuItem>
                         <MenuItem name="/academic" to="/research/academic">学术活动</MenuItem>
                     </Submenu>
                 </MenuItem>
