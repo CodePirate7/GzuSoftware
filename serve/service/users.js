@@ -23,7 +23,6 @@ module.exports = {
       return 
     }
     let userresult = await new Users( user ).save();
-    console.log( userresult );
     result.success = true;
     result.message = "注册成功";
     ctx.body = result
@@ -79,17 +78,30 @@ module.exports = {
     ctx.body = result;
   },
   //删除指定用户
-  deleteOneByName: async ( ctx ) => {
-    let { name } = ctx.params;
+  deleteOne: async ( ctx ) => {
+    let { id } = ctx.params;
     let result = {
       success: false,
       data: null,
       message: ""
     };
-    let userResult = await Users.remove( {username: name} );
+    let userResult = await Users.remove( {_id: id} );
     result.data = userResult;
     result.success = true;
     result.message = `操作成功,共删除 ${userResult.n} 条数据`;
     ctx.body = result;
+  },
+  changeLevel: async ( ctx ) => {
+    let { isAdmin,id } = ctx.request.body;
+    let result = {
+      success: false,
+      data: null,
+      message: ""
+    };
+    let userResult = await Users.findOneAndUpdate({_id: id},{isAdmin});
+    result.data = userResult;
+    result.success = true;
+    result.message = "操作成功";
+    ctx.body = result
   }
 }

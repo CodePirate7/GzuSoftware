@@ -19,25 +19,24 @@
                         <Icon type="ios-navigate"></Icon>
                         <span>发布新闻</span>
                     </MenuItem>
-                    <MenuItem name="/admin/comment" to="comment">
+                    <MenuItem name="/admin/banner" to="banner">
                         <Icon type="ios-navigate"></Icon>
-                        <span>评论管理</span>
+                        <span>轮播管理</span>
                     </MenuItem>
-
                 </Menu>
             </Sider>
             <Layout>
-                <Header :style="{background: '#fff', boxShadow: '0 2px 3px 2px rgba(0,0,0,.1)'}">
+                <Header :style="{background: '#fff', boxShadow: '0 2px 3px 2px rgba(0,0,0,.1)',display:'flex',justifyContent:'space-between'}">
+                    <Breadcrumb style="width:80%;">
+                        <BreadcrumbItem>首页</BreadcrumbItem>
+                        <BreadcrumbItem>{{nav}}</BreadcrumbItem>
+                    </Breadcrumb>
                     <div style="text-align: right;">
                         欢迎你，{{admin.username}}
                     </div>
                 </Header>
-                <Content :style="{padding: '0 16px 16px'}">
-                    <Breadcrumb :style="{margin: '16px 0'}">
-                        <BreadcrumbItem>首页</BreadcrumbItem>
-                        <BreadcrumbItem>{{nav}}</BreadcrumbItem>
-                    </Breadcrumb>
-                    <Card>
+                <Content :style="{padding: '16px 16px 16px'}">
+                    <Card shadow>
                         <slot></slot>
                     </Card>
                 </Content>
@@ -57,7 +56,7 @@
             else if( name == 'news' ) this.nav = '新闻总览';
             else if( name == 'articles' ) this.nav = '文章总览';
             else if( name == "addnews" ) this.nav = "发布新闻";
-            else if( name == 'comment' ) this.nav = "评论管理";
+            else if( name == 'banner' ) this.nav = "轮播管理";
             // this.nav = this.$route.path.ind
         },
         mounted(){

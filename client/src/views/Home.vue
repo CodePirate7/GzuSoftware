@@ -26,7 +26,7 @@
             </router-link>
         </div>
     </Card>
-    <Card class="container">
+    <Card class="container" shadow>
         <p slot="title" style="font-size:20px;font-weight:bolder;color: #1469C1;">
             作 品 展 示
         </p>
@@ -34,7 +34,7 @@
             更 多
         </router-link>
         <div>
-            <css-card ></css-card>
+            <css-card></css-card>
         </div>
     </Card>
     <div class="footer container">

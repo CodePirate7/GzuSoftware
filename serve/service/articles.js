@@ -87,4 +87,18 @@ module.exports = {
         result.message = "操作成功";
         ctx.body = result;
     },
+    //删除文章
+    deleteOneByID: async ( ctx ) => {
+        let { id } = ctx.params;
+        let result = {
+            success: false,
+            data: null,
+            message: ""
+        };
+        let articleResult = await Articles.remove( {_id: id} );
+        result.data = articleResult;
+        result.success = true;
+        result.message = `操作成功,共删除 ${articleResult.n} 条数据`;
+        ctx.body = result;
+    }
 }

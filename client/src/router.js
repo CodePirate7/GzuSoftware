@@ -9,17 +9,17 @@ export default new Router({
       path: '/',
       name:'welcome',
       component:() => import(/* webpackChunkName: "welcome" */ './views/Welcome.vue'),
-      meta:{
-        title:'Welcome'
-      }
+        meta:{
+            requiresAuth: false
+        }
     },
     {
     path: '/home',
     name: 'home',
     component: () => import(/* webpackChunkName: "home" */ './views/Home.vue'),
-    meta:{
-      title:'贵州大学示范性软件学院'
-      }
+        meta:{
+            requiresAuth: false
+        }
     },
     {
       path: '/forum',
@@ -29,16 +29,25 @@ export default new Router({
       children:[
         {
           path: 'forumlist',
-          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumList.vue')
+          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumList.vue'),
+            meta:{
+                requiresAuth: false
+            }
         },
         {
           path: 'add',
-          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevAdd.vue')
+          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevAdd.vue'),
+            meta:{
+                requiresAuth: false
+            }
         },
         {
           path:'article',
           name:'article',
-          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue')
+          component: () => import(/* webpackChunkName: "about" */ './views/forum/DevForumDetail.vue'),
+            meta:{
+                requiresAuth: false
+            }
         }
       ]
     },
@@ -50,15 +59,24 @@ export default new Router({
       children: [
         {
           path: 'introduction',
-          component: () => import(/* webpackChunkName: "about" */ './views/school/DevIntroduction.vue')
+          component: () => import(/* webpackChunkName: "about" */ './views/school/DevIntroduction.vue'),
+            meta:{
+                requiresAuth: false
+            }
         },
         {
             path: 'structure',
-            component: () => import(/* webpackChunkName: "about" */ './views/school/DevStructure.vue')
+            component: () => import(/* webpackChunkName: "about" */ './views/school/DevStructure.vue'),
+            meta:{
+                requiresAuth: false
+            }
         },
         {
             path: 'partner',
-            component: () => import(/* webpackChunkName: "about" */ './views/school/DevPartner.vue')
+            component: () => import(/* webpackChunkName: "about" */ './views/school/DevPartner.vue'),
+            meta:{
+                requiresAuth: false
+            }
         }
       ]
 
@@ -71,11 +89,17 @@ export default new Router({
         children: [
             {
                 path: 'teaching',
-                component: () => import(/* webpackChunkName: "about" */ './views/workers/DevTeaching.vue')
+                component: () => import(/* webpackChunkName: "about" */ './views/workers/DevTeaching.vue'),
+                meta:{
+                    requiresAuth: false
+                }
             },
             {
                 path: 'administrative',
-                component: () => import(/* webpackChunkName: "about" */ './views/workers/DevAdministrative.vue')
+                component: () => import(/* webpackChunkName: "about" */ './views/workers/DevAdministrative.vue'),
+                meta:{
+                    requiresAuth: false
+                }
             }
         ]
         },
@@ -87,11 +111,17 @@ export default new Router({
             children: [
                 {
                     path: 'training',
-                    component: () => import(/* webpackChunkName: "about" */ './views/students/DevTraining.vue')
+                    component: () => import(/* webpackChunkName: "about" */ './views/students/DevTraining.vue'),
+                    meta:{
+                        requiresAuth: false
+                    }
                 },
                 {
                     path: 'curriculum',
-                    component: () => import(/* webpackChunkName: "about" */ './views/students/DevCurriculum.vue')
+                    component: () => import(/* webpackChunkName: "about" */ './views/students/DevCurriculum.vue'),
+                    meta:{
+                        requiresAuth: false
+                    }
                 }
 
             ]
@@ -104,19 +134,31 @@ export default new Router({
             children: [
                 {
                     path: 'stu-achievement',
-                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevStuAchievement.vue')
+                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevStuAchievement.vue'),
+                    meta:{
+                        requiresAuth: false
+                    }
                 },
                 {
                     path: 'tea-achievement',
-                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevTeaAchievement.vue')
+                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevTeaAchievement.vue'),
+                    meta:{
+                        requiresAuth: false
+                    }
                 },
                 {
                     path: 'research',
-                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevResearch.vue')
+                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevResearch.vue'),
+                    meta:{
+                        requiresAuth: false
+                    }
                 },
                 {
                     path: 'academic',
-                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevAcademic.vue')
+                    component: () => import(/* webpackChunkName: "about" */ './views/research/DevAcademic.vue'),
+                    meta:{
+                        requiresAuth: false
+                    }
                 }
             ]
         },
@@ -128,11 +170,17 @@ export default new Router({
             children: [
                 {
                     path: 'enrollment',
-                    component: () => import(/* webpackChunkName: "about" */ './views/enandem/DevEnrollment.vue')
+                    component: () => import(/* webpackChunkName: "about" */ './views/enandem/DevEnrollment.vue'),
+                    meta:{
+                        requiresAuth: false
+                    }
                 },
                 {
                     path: 'employment',
-                    component: () => import(/* webpackChunkName: "about" */ './views/enandem/DevEmployment.vue')
+                    component: () => import(/* webpackChunkName: "about" */ './views/enandem/DevEmployment.vue'),
+                    meta:{
+                        requiresAuth: false
+                    }
                 }
             ]
         },
@@ -146,53 +194,99 @@ export default new Router({
               path:'news',
               name:'news',
               component: () => import(/* webpackChunkName: "about" */ './views/information/News.vue'),
+              meta:{
+                  requiresAuth: false
+              }
           },
           {
               path:'notice',
-              component:() => import(/* webpackChunkName: "about" */ './views/information/Notice.vue')
+              component:() => import(/* webpackChunkName: "about" */ './views/information/Notice.vue'),
+              meta:{
+                  requiresAuth: false
+              }
           }
       ]
     },
     {
           path:'/information/news/:id',
           name:'newsDetail',
-          component: () => import(/* webpackChunkName: "about" */ './views/information/NewsDetail.vue')
+          component: () => import(/* webpackChunkName: "about" */ './views/information/NewsDetail.vue'),
+            meta:{
+            requiresAuth: false
+        }
     },
+      {
+        path:'/project',
+          component: () => import('./views/project/project.vue'),
+        meta:{
+            requiresAuth: false
+        }
+      },
       {
         path:'/admin',
         name:'admin',
         component: () => import(/* webpackChunkName: "about" */ './views/admin/AdminLyout.vue'),
-        redirect:'/admin/login',
+        meta:{
+          requiresAuth: true
+        },
         children:[
             {
                 path:'login',
-                component:() => import(/* webpackChunkName: "about" */ './views/admin/Login.vue')
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/Login.vue'),
+                meta:{
+                    requiresAuth: false
+                }
             },
             {
                 path:'home',
-                component:() => import(/* webpackChunkName: "about" */ './views/admin/Layout.vue')
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/Layout.vue'),
+                meta:{
+                    requiresAuth: true
+                }
             },
             {
                 path:'news',
-                component:() => import(/* webpackChunkName: "about" */ './views/admin/News.vue')
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/News.vue'),
+                meta:{
+                    requiresAuth: true
+                }
             },
             {
                 path:'addnews',
-                component:() => import(/* webpackChunkName: "about" */ './views/admin/AddNews.vue')
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/AddNews.vue'),
+                meta:{
+                    requiresAuth: true
+                }
             },
             {
                 path:'users',
-                component:() => import(/* webpackChunkName: "about" */ './views/admin/Users.vue')
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/Users.vue'),
+                meta:{
+                    requiresAuth: true
+                }
             },
             {
                 path:'articles',
-                component:() => import(/* webpackChunkName: "about" */ './views/admin/Articles.vue')
+                component:() => import(/* webpackChunkName: "about" */ './views/admin/Articles.vue'),
+                meta:{
+                    requiresAuth: true
+                }
+            },
+            {
+                path:'banner',
+                component:() => import('./views/admin/Banner.vue'),
+                meta:{
+                    requiresAuth: true
+                }
             }
         ]
       },
     {
       path:'*',
-      component: () => import(/* webpackChunkName: "about" */ './views/404.vue')
+      component: () => import(/* webpackChunkName: "about" */ './views/404.vue'),
+        meta:{
+            requiresAuth: false
+        }
     }
 
 

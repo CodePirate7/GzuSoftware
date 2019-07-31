@@ -2,16 +2,14 @@
   <div class="content">
     <a class="card" href="#!">
       <div class="front" style="background: linear-gradient(33deg, #6CACFF, #8DEBFF)">
-          <p>贵农网</p>
+          <p>跑跑吧</p>
       </div>
       <div class="back">
         <div>
             <p>
-                情通天下，方能货通天下。贵农网是打造农
-                民自己的电商平台，把服务作为最高的追求，把
-                价值作为立业之基
+                产品以智能互助系统为核心,结合校园资讯发布和轻社交功能,致力于用大数据智能推荐技术使学生高效便捷地享受校园生活
             </p>
-          <button class="button">了解详情</button>
+          <button class="button" @click="jump">了解详情</button>
         </div>
       </div>
     </a>
@@ -46,7 +44,12 @@
 
 <script>
 export default {
-  name: "DevHeader"
+  name: "DevHeader",
+  methods:{
+      jump(){
+          this.$router.push('/project');
+      }
+  }
 };
 </script>
 
