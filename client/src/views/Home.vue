@@ -60,6 +60,9 @@
                 </Card>
                 </Col>
             </row>
+            <Card style="margin-top:20px;">
+                <p>放备案信息</p>
+            </Card>
         </div>
 </div>
   </div>
