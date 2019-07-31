@@ -2,12 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\assets",
     "\\src\\components",
     "\\src\\views",
-    "\\src\\views\\research",
-    "\\src\\views\\students",
     "\\src\\views\\workers"
   ],
-  "SelectedNode": "\\src\\components\\Swiper.vue",
+  "SelectedNode": "\\src\\assets",
   "PreviewInSolutionExplorer": false
 }
