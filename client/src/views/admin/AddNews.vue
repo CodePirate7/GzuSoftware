@@ -5,7 +5,7 @@
                 <Input v-model="title"></Input>
             </FormItem>
             <FormItem label="摘要">
-                <Input v-model="summary" type="textarea"></Input>
+                <Input v-model="summary" type="textarea" :rows="8"></Input>
             </FormItem>
             <FormItem label="上传文件">
                 <Upload action="http://localhost:3000/news/add" :before-upload="handleUpload">

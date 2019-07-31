@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a6649b5-db2a-4db3-a269-757029261f65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/views/admin/Banner.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/views/project/project.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serve/models/banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serve/service/banner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CssCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CssCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Swiper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Swiper.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/admin/AddNews.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/admin/AddNews.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/admin/AdminLyout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/admin/AdminLyout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/admin/Articles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/admin/Articles.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/views/admin/Layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/admin/Layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/admin/News.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/admin/News.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/admin/Users.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/admin/Users.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serve/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/serve/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serve/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/serve/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serve/service/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/serve/service/articles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serve/service/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/serve/service/news.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serve/service/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/serve/service/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serve/service/新建文本文档.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,27 +37,78 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/views/admin/News.vue">
+        <entry file="file://$PROJECT_DIR$/client/src/views/admin/Banner.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2600">
-              <caret line="104" column="14" lean-forward="true" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+            <state relative-caret-position="150">
+              <caret line="6" column="111" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="111" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/views/Home.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-25">
+              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#layout#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#Card#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#Card#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#router-link#0;n#div#0;n#Card#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#Card#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#router-link#0;n#Card#1;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/views/admin/Login.vue">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/client/src/views/information/NewsDetail.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="99" column="8" lean-forward="true" selection-start-line="99" selection-start-column="8" selection-end-line="102" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#Breadcrumb#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#Card#0;n#div#0;n#div#0;n#template#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="223" column="8" lean-forward="true" selection-start-line="223" selection-start-column="8" selection-end-line="223" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/views/admin/Layout.vue">
+        <entry file="file://$PROJECT_DIR$/client/src/views/project/project.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
+            <state relative-caret-position="472">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+              <folding>
+                <element signature="n#style#0;n#Breadcrumb#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#strong#0;n#div#1;n#Card#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/views/information/InformationLayout.vue">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/CssCard.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -47,8 +118,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="XSLT Stylesheet" />
+        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
       </list>
     </option>
@@ -67,12 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/views/forum/DevReg.vue" />
-        <option value="$PROJECT_DIR$/client/src/views/forum/DevForumDetail.vue" />
-        <option value="$PROJECT_DIR$/serve/models/articles.js" />
-        <option value="$PROJECT_DIR$/client/src/plugins/iview.js" />
-        <option value="$PROJECT_DIR$/client/src/views/forum/DevAdd.vue" />
-        <option value="$PROJECT_DIR$/client/src/views/workers/DevAdministrative.vue" />
         <option value="$PROJECT_DIR$/client/src/views/school/DevLayout.vue" />
         <option value="$PROJECT_DIR$/client/src/views/school/DevStructure.vue" />
         <option value="$PROJECT_DIR$/client/src/views/students/DevLayout.vue" />
@@ -87,12 +152,9 @@
         <option value="$PROJECT_DIR$/client/src/views/information/Information.vue" />
         <option value="$PROJECT_DIR$/client/src/views/information/Notice.vue" />
         <option value="$PROJECT_DIR$/client/src/views/admin/Login.vue" />
-        <option value="$PROJECT_DIR$/client/src/views/admin/AdminLyout.vue" />
         <option value="$PROJECT_DIR$/client/src/App.vue" />
         <option value="$PROJECT_DIR$/client/public/index.html" />
         <option value="$PROJECT_DIR$/client/src/views/admin/news.vue" />
-        <option value="$PROJECT_DIR$/client/src/views/information/NewsDetail.vue" />
-        <option value="$PROJECT_DIR$/serve/service/users.js" />
         <option value="$PROJECT_DIR$/client/src/views/information/InformationLayout.vue" />
         <option value="$PROJECT_DIR$/client/src/views/information/News.vue" />
         <option value="$PROJECT_DIR$/client/src/views/forum/DevForumList.vue" />
@@ -100,24 +162,33 @@
         <option value="$PROJECT_DIR$/client/node_modules/_iview@3.4.2@iview/dist/styles/iview.css" />
         <option value="$PROJECT_DIR$/client/src/views/workers/DevTeaching.vue" />
         <option value="$PROJECT_DIR$/serve/package.json" />
-        <option value="$PROJECT_DIR$/serve/service/articles.js" />
-        <option value="$PROJECT_DIR$/client/src/main.js" />
         <option value="$PROJECT_DIR$/client/src/views/school/DevPartner.vue" />
         <option value="$PROJECT_DIR$/client/src/views/school/DevIntroduction.vue" />
         <option value="$PROJECT_DIR$/serve/node_modules/_mammoth@1.4.8@mammoth/lib/images.js" />
-        <option value="$PROJECT_DIR$/serve/api/api.js" />
-        <option value="$PROJECT_DIR$/client/src/views/admin/AddNews.vue" />
         <option value="$PROJECT_DIR$/serve/app.js" />
         <option value="$PROJECT_DIR$/serve/models/news.js" />
-        <option value="$PROJECT_DIR$/serve/service/news.js" />
-        <option value="$PROJECT_DIR$/client/src/views/Home.vue" />
-        <option value="$PROJECT_DIR$/client/src/views/admin/News.vue" />
         <option value="$PROJECT_DIR$/serve/models/users.js" />
-        <option value="$PROJECT_DIR$/client/src/views/admin/Users.vue" />
         <option value="$PROJECT_DIR$/client/src/views/admin/articles.vue" />
-        <option value="$PROJECT_DIR$/client/src/router.js" />
+        <option value="$PROJECT_DIR$/serve/service/articles.js" />
+        <option value="$PROJECT_DIR$/serve/service/news.js" />
         <option value="$PROJECT_DIR$/client/src/views/admin/Articles.vue" />
+        <option value="$PROJECT_DIR$/client/src/views/admin/Users.vue" />
+        <option value="$PROJECT_DIR$/client/src/views/admin/News.vue" />
+        <option value="$PROJECT_DIR$/client/src/main.js" />
+        <option value="$PROJECT_DIR$/client/src/views/admin/AdminLyout.vue" />
         <option value="$PROJECT_DIR$/client/src/views/admin/Layout.vue" />
+        <option value="$PROJECT_DIR$/client/src/views/admin/AddNews.vue" />
+        <option value="$PROJECT_DIR$/serve/models/banner.js" />
+        <option value="$PROJECT_DIR$/serve/service/users.js" />
+        <option value="$PROJECT_DIR$/serve/api/api.js" />
+        <option value="$PROJECT_DIR$/serve/service/banner.js" />
+        <option value="$PROJECT_DIR$/client/src/views/admin/Banner.vue" />
+        <option value="$PROJECT_DIR$/client/src/components/Swiper.vue" />
+        <option value="$PROJECT_DIR$/client/src/components/CssCard.vue" />
+        <option value="$PROJECT_DIR$/client/src/router.js" />
+        <option value="$PROJECT_DIR$/client/src/views/Home.vue" />
+        <option value="$PROJECT_DIR$/client/src/views/information/NewsDetail.vue" />
+        <option value="$PROJECT_DIR$/client/src/views/project/project.vue" />
       </list>
     </option>
   </component>
@@ -128,8 +199,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="18" />
+    <option name="x" value="-80" />
+    <option name="y" value="379" />
     <option name="width" value="1905" />
     <option name="height" value="1005" />
   </component>
@@ -141,6 +212,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -164,6 +236,13 @@
               <item name="C:\编程\项目\GzuSoftware" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="client" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GzuSoftware" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\编程\项目\GzuSoftware" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="client" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -172,19 +251,55 @@
               <item name="client" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="information" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GzuSoftware" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\编程\项目\GzuSoftware" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="client" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="project" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GzuSoftware" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\编程\项目\GzuSoftware" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="serve" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GzuSoftware" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\编程\项目\GzuSoftware" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="serve" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="api" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GzuSoftware" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\编程\项目\GzuSoftware" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="serve" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="models" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GzuSoftware" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\编程\项目\GzuSoftware" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="serve" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="GzuSoftware" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\编程\项目\GzuSoftware" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="serve" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="service" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/serve" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -197,14 +312,14 @@
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\编程\项目\GzuSoftware\client\src\views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\编程\项目\GzuSoftware\serve" />
       <recent name="C:\编程\项目\GzuSoftware\serve\public\image" />
       <recent name="C:\编程\项目\GzuSoftware\client\public" />
       <recent name="C:\编程\项目\GzuSoftware\client\src\assets" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\编程\项目\GzuSoftware\client\src\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -286,7 +401,14 @@
       <workItem from="1563177070649" duration="4828000" />
       <workItem from="1563182131993" duration="8037000" />
       <workItem from="1563240367543" duration="3859000" />
-      <workItem from="1563259930695" duration="2219000" />
+      <workItem from="1563259930695" duration="3691000" />
+      <workItem from="1563285317196" duration="85000" />
+      <workItem from="1563841838111" duration="836000" />
+      <workItem from="1564364393719" duration="1560000" />
+      <workItem from="1564396152026" duration="180000" />
+      <workItem from="1564406768246" duration="1221000" />
+      <workItem from="1564473830223" duration="2663000" />
+      <workItem from="1564535680818" duration="21290000" />
     </task>
     <task id="LOCAL-00001" summary="增加了写文章模块">
       <created>1560932564135</created>
@@ -400,11 +522,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563246146918</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="更改了后台页面的导航结构,完成了面包屑导航">
+      <created>1563262237772</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1563262237773</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218440000" />
+    <option name="totallyTimeSpent" value="247747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -419,7 +548,7 @@
     <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17077045" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2359015" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -433,7 +562,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.8986014" />
       <window_info anchor="bottom" id="Thumbnails" order="10" weight="0.32867134" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.6416084" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.50524473" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -457,39 +586,10 @@
     <MESSAGE value="增加了管理系统,增加了上传新闻功能" />
     <MESSAGE value="\增加了上传新闻功能" />
     <MESSAGE value="增加了新闻模块,后台用户总览文章总览新闻总览和发布新闻" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了新闻模块,后台用户总览文章总览新闻总览和发布新闻" />
+    <MESSAGE value="更改了后台页面的导航结构,完成了面包屑导航" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改了后台页面的导航结构,完成了面包屑导航" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/dist/img/student-curr-1.5c3a94a7.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/img/student-curr-2.1974512d.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/img/student-curr-4.76157711.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/img/student-curr-5.647ab1f3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/img/student-curr-6.8f9a570c.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/img/research-acad-13.cb07cd9f.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/img/research-acad-12.043b8872.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/img/research-acad-11.9b4b41a5.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/img/research-acad-10.6422f9a4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/img/research-acad-8.4acb86b6.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/dist/img/research-acad-6.4b1f6ca2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -519,28 +619,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/dist/img/BG.2242fdc3.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/views/information/NewsDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2075">
-          <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="227" />
-          <folding>
-            <element signature="n#style#0;n#Breadcrumb#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#Breadcrumb#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#Card#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/views/school/SchoolLayout.vue">
       <provider selected="true" editor-type-id="text-editor" />
@@ -575,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serve/service/articles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serve/config.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -591,9 +662,6 @@
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serve/public/image/1563114334315.jpeg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/serve/public/image/1563114607066.jpeg">
       <provider selected="true" editor-type-id="images" />
@@ -615,39 +683,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/CssCard.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serve/models/news.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serve/service/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/views/admin/AdminLyout.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/views/admin/AddNews.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#Button#1;n#FormItem#3;n#Form#0;n#layout#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -658,10 +697,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/views/admin/Login.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/views/admin/Users.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" selection-end-line="94" selection-end-column="8" />
+        <state relative-caret-position="222">
+          <caret line="108" column="37" lean-forward="true" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#Button#0;n#template#1;n#Table#0;n#layout#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#layout#0;n#template#0;n#!!top" expanded="true" />
@@ -669,20 +711,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/router.js">
+    <entry file="file://$PROJECT_DIR$/client/src/views/admin/AdminLyout.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4675">
-          <caret line="188" column="87" selection-start-line="188" selection-start-column="87" selection-end-line="188" selection-end-column="87" />
+        <state relative-caret-position="325">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/views/admin/Articles.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="20" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#layout#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/views/admin/Articles.vue">
+    <entry file="file://$PROJECT_DIR$/client/src/views/admin/News.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="350">
+          <caret line="107" column="10" selection-start-line="107" selection-start-column="10" selection-end-line="109" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#0;n#layout#0;n#template#0;n#!!top" expanded="true" />
           </folding>
@@ -691,22 +750,118 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/serve/models/articles.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="20" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/views/admin/AddNews.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1475">
+          <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#Button#1;n#FormItem#3;n#Form#0;n#layout#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serve/service/news.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="11" />
+          <caret line="76" column="8" selection-end-line="84" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serve/public/uploads/1564582153718.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serve/models/banner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serve/public/image/1564582518001.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serve/public/image/1563114334315.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serve/service/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="8" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serve/api/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="122">
+          <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serve/service/articles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="82" lean-forward="true" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serve/service/banner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/views/admin/Layout.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#Breadcrumb#0;n#Header#0;n#Layout#0;n#Layout#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#Header#0;n#Layout#0;n#Layout#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/views/admin/Banner.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="111" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Swiper.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/views/information/InformationLayout.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/CssCard.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/views/information/Information.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/views/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        <state relative-caret-position="-25">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#p#0;n#Card#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#Card#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -717,23 +872,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/views/admin/News.vue">
+    <entry file="file://$PROJECT_DIR$/client/src/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2600">
-          <caret line="104" column="14" lean-forward="true" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+        <state relative-caret-position="371">
+          <caret line="223" column="8" lean-forward="true" selection-start-line="223" selection-start-column="8" selection-end-line="223" selection-end-column="8" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#layout#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/views/admin/Login.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/views/admin/Layout.vue">
+    <entry file="file://$PROJECT_DIR$/client/src/views/information/NewsDetail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
+        <state relative-caret-position="325">
+          <caret line="99" column="8" lean-forward="true" selection-start-line="99" selection-start-column="8" selection-end-line="102" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#Breadcrumb#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#Card#0;n#div#0;n#div#0;n#template#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/views/project/project.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="n#style#0;n#Breadcrumb#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#div#1;n#Card#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

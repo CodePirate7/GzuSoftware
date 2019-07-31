@@ -1,6 +1,6 @@
 <template>
     <layout>
-        <Table :columns="columns" :data="data" :loading="loading" border size="small">
+        <Table :columns="columns" :data="list" :loading="loading" border size="small">
             <template slot-scope="{ row }" slot="time">
                 <Time :time="row.createAt" type="date"></Time>
             </template>
@@ -10,12 +10,12 @@
         </Table>
 
         <div style="text-align: center;margin: 16px 0">
-            <Page
-                    :total="total"
-                    :current.sync="current"
-                    show-sizer
-                    @on-change="getData"
-                    @on-page-size-change="handleChangeSize"></Page>
+            <Page :total="total"
+                  size="small"
+                  show-total
+                  @on-change="handleChangeSize"
+                  :current.sync="current"
+            />
         </div>
     </layout>
 </template>
@@ -28,9 +28,13 @@
             return {
                 columns: [
                     {
-                        type: 'index',
-                        width: 60,
-                        align: 'center',
+                        title:'序号',
+                        type:'index',
+                        align:'center',
+                        indexMethod: (row) => {
+                            return (row._index + 1) + (10 * this.current) - 10;
+                        },
+                        width:70
                     },
                     {
                         title: '新闻标题',
@@ -60,7 +64,8 @@
                 loading: false,
                 total: 0,
                 current: 1,
-                size: 10
+                size: 10,
+                list:[]
             };
         },
         methods: {
@@ -68,29 +73,33 @@
                 if ( this.loading ) return;
                 this.loading = true;
                 this.$axios.get('/news').then( res => {
-                    this.data = res.data;
                     this.loading = false;
+                    let data = res.data;
+                    this.data = data;
+                    this.list = data.slice(0,10);
+                    this.total = data.length;
                 })
-                // $.ajax({
-                //     method: 'get',
-                //     url: `/data/list/${this.current}/${this.size}`
-                // }).then(res => {
-                //     setTimeout(() => {
-                //         this.data = res.data.data.list;
-                //         this.total = res.data.data.total;
-                //         this.loading = false;
-                //     }, 1000);
-                // })
-
             },
-            handleChangeSize (val) {
-                this.size = val;
-                this.$nextTick(() => {
-                    this.getData();
-                });
+            handleChangeSize (size) {
+                let asize = size - 1;
+                this.list = this.data.slice( asize * 10, asize * 10 + 10 );
             },
             remove (index) {
-                this.data.splice(index, 1);
+                let {_id:id} = this.data[index];
+                index = index + (10 * this.current) - 10;
+                this.$Modal.confirm({
+                    title:'警告',
+                    content:'该操作不可逆，是否继续?',
+                    onOk: () => {
+                        this.$axios.delete(`/news/${id}`)
+                            .then( res => {
+                                this.$Message.success(res.data.message);
+                                this.data.splice(index,1);
+                                this.list.splice(index % 10,1);
+                                this.total = this.data.length;
+                            });
+                    }
+                })
             }
         },
         mounted () {

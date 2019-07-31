@@ -2,29 +2,12 @@
         <div class="swiper" ref="home" @mousemove="fn1" @mouseleave="fn2">
             <div id="banner" ref="banner">
                 <Carousel loop  class="container" >
-                    <CarouselItem>
-                        <div class="demo-carousel img2" >
-                            这 里 放 描 述 性 文 字
-                        </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                        <div class="demo-carousel img2">
-                            这 里 放 描 述 性 文 字
-                        </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                        <div class="demo-carousel img3">
-                            这 里 放 描 述 性 文 字
-                        </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                        <div class="demo-carousel img4">
-                            这 里 放 描 述 性 文 字
-                        </div>
+                    <CarouselItem v-for="(item,index) in imgList" :key="index">
+                    <div class="demo-carousel"
+                         :style="{'background': 'url(http://localhost:3000/' + item.url + ') no-repeat center/cover'}" ></div>
                     </CarouselItem>
                 </Carousel>
             </div>
-
         </div>
 </template>
 
@@ -35,7 +18,8 @@
         data(){
             return {
                 x:'',
-                y:''
+                y:'',
+                imgList:[]
             }
         },
         methods:{
@@ -57,7 +41,16 @@
             fn2(){
                 let banner = this.$refs.banner;
                 banner.style.transform = ''
+            },
+            getImage(){
+                this.$axios.get('banner')
+                    .then( res => {
+                        this.imgList = res.data;
+                    })
             }
+        },
+        mounted(){
+            this.getImage();
         }
     }
 </script>

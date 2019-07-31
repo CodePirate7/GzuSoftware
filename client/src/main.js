@@ -27,6 +27,21 @@ Vue.component('DevHeader',DevHeader);
 //   return config
 // });
 
+router.beforeEach((to,from,next)=>{
+  const requiresAuth = to.meta.requiresAuth;
+  if( requiresAuth ){
+    if(window.localStorage.getItem('admin')){
+      next();
+    }else{
+      next({
+        path:'/admin/login'
+      });
+    }
+  }else{
+    next();
+  }
+});
+
 Vue.config.productionTip = false;
 
 new Vue({
