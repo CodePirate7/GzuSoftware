@@ -77,7 +77,14 @@ export default new Router({
             meta:{
                 requiresAuth: false
             }
-        }
+          },
+          {
+              path: 'contact',
+              component: () => import(/* webpackChunkName: "about" */ './views/school/DevContact.vue'),
+              meta: {
+                  requiresAuth: false
+              }
+          }
       ]
 
     },

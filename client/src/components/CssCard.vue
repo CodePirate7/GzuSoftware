@@ -225,4 +225,8 @@ export default {
   transform: translateZ(-20px);
   top: 12px;
 }
+p{
+        font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB,"Microsoft JhengHei", "MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
+
+  }
 </style>

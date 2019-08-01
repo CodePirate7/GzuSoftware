@@ -38,13 +38,14 @@
 <script>
     import SchoolLayout from './SchoolLayout'
 import OrgTree from './org-tree'
-import { data, newData } from './data'
+import { data/*, newData*/ } from './data'
 export default {
   name: 'DevStructure',
   data () {
     return {
       data,
-      expandAll: false,
+        //expandAll: false,
+      expandAll: true,
       props: {
         id: 'dep_id',
         label: 'title',
